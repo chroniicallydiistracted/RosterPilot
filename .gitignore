@@ -114,6 +114,17 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+# Node / frontend
+node_modules/
+pnpm-lock.yaml
+frontend/.next/
+frontend/out/
+frontend/node_modules/
+frontend/.turbo/
+
+# Coverage
+coverage/
+
 # Pyre type checker
 .pyre/
 

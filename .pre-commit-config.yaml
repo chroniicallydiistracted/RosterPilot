@@ -1,0 +1,27 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-toml
+      - id: check-yaml
+      - id: check-json
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.1.5
+    hooks:
+      - id: ruff
+        args: ["--config", "ruff.toml", "backend/app", "backend/tests"]
+      - id: ruff-format
+        args: ["--config", "ruff.toml", "backend/app", "backend/tests"]
+  - repo: local
+    hooks:
+      - id: mypy-backend
+        name: mypy (backend)
+        entry: bash -c "cd backend && poetry run mypy app"
+        language: system
+        pass_filenames: false
+        types: [python]
+        additional_dependencies: []
+        files: ^backend/app/

@@ -10,7 +10,7 @@
     "build:frontend": "cd frontend && npm install && npm run build",
     "lint": "npm run lint:frontend && npm run lint:backend",
     "lint:frontend": "cd frontend && npm run lint",
-    "lint:backend": "cd backend && poetry run ruff check . && poetry run mypy .",
+    "lint:backend": "cd backend && poetry run ruff check app tests && poetry run mypy --config-file ../mypy.ini app",
     "test": "npm run test:frontend && npm run test:backend",
     "test:frontend": "cd frontend && npm run test",
     "test:backend": "cd backend && poetry run pytest",
