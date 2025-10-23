@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "rosterpilot-backend"
+version = "0.1.0"
+description = "FastAPI backend for the RosterPilot Yahoo + PyESPN companion"
+authors = ["RosterPilot Engineering <dev@rosterpilot.com>"]
+packages = [{ include = "app" }]
+readme = "../README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.103.1"
+uvicorn = { extras = ["standard"], version = "^0.23.2" }
+pydantic-settings = "^2.0.3"
+sqlalchemy = "^2.0.20"
+alembic = "^1.12.0"
+httpx = "^0.25.0"
+redis = "^5.0.0"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-asyncio = "^0.21.1"
+httpx = { version = "^0.25.0", extras = ["cli"] }
+ruff = "^0.0.292"
+mypy = "^1.5.1"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.6.1"]
+build-backend = "poetry.core.masonry.api"
