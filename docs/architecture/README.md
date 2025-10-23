@@ -10,6 +10,8 @@ Suggested artifacts:
   interactions
 - Infrastructure topology showing Cloud Run, Neon, Upstash, and
   Cloudflare Pages
+- [Frontend Feature Overview](frontend_feature_overview.md) mapping UI
+  surfaces to backend contracts and UX pillars
 
 Update this document whenever new architectural decisions are captured
 in ADRs or `DEPLOYMENT.md`.
