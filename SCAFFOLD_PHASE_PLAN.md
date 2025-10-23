@@ -7,10 +7,16 @@
 ---
 
 ## 0. Guiding Principles
-- Maintain strict data provenance: Yahoo for fantasy constructs, PyESPN for official NFL.  
-- Read-only Yahoo scope (`fspt-r`). OAuth secrets never stored in repo; use environment variables.  
-- Fast iteration with quality gates: lint, type check, unit, contract tests, security scan.  
+- Maintain strict data provenance: Yahoo for fantasy constructs, PyESPN for official NFL.
+- Read-only Yahoo scope (`fspt-r`). OAuth secrets never stored in repo; use environment variables.
+- Fast iteration with quality gates: lint, type check, unit, contract tests, security scan.
 - CI/CD ready from day one; deploy targets per `DEPLOYMENT.md` (Cloud Run backend, Cloudflare Pages frontend).
+
+### 0.1 Web App Vision Alignment
+- Anchor UX decisions to the companion-first vision in `README.md` and `docs/architecture/frontend_feature_overview.md` (advisor tone, provenance badges, live context).
+- Treat the scaffold as a contract for backend ↔ frontend collaboration: every stubbed endpoint should expose shapes described in `INSTRUCTIONS.md` and docs/api notes.
+- Respect accessibility and performance pillars from the frontend overview (WCAG AA, 60 fps animations, low-latency WS updates) when defining interfaces and acceptance tests.
+- Document any deviation from the published vision with ADRs in `docs/architecture/` so downstream agents can react before implementation begins.
 
 ---
 
@@ -66,6 +72,12 @@
 - Testing harness: pytest, coverage, httpx, respx for backend; Jest, Testing Library, Playwright for frontend.
 - Security: `pip-audit`, `npm audit`, secret scanning via CI.
 
+### 1.3 Environment Variables & Secrets
+- Mirror the matrices in `ENVIRONMENT_VARIABLES.md` by adding checked-in `.env.example` files under `backend/` and `frontend/` plus documentation callouts in `docs/DEV_SETUP.md`.
+- Ensure scaffolded settings modules (`backend/app/config.py`, frontend runtime config) read from env vars with sensible defaults and clear error messages when required secrets (e.g., `DATABASE_URL`, `YAHOO_CLIENT_SECRET`) are missing.
+- Add CI guardrails that fail fast if expected env vars are absent (GitHub Actions workflow step validating `APP_ENV`, `NEXT_PUBLIC_API_URL`, etc.).
+- Define feature flag expectations (`FEATURE_WEATHER`, `FEATURE_REPLAY`, `NEXT_PUBLIC_ENV`) so tests can exercise gated behavior without leaking secrets.
+
 ---
 
 ## 2. Phase Plan (aligned with gated execution order)
@@ -76,6 +88,7 @@
 - Add Dockerfile (backend), `.dockerignore`, base `.env` support (Pydantic settings).
 - Establish CI pipeline skeleton (GitHub Actions) running lint, type check, tests on stubs.
 - Document local dev workflow in `docs/DEV_SETUP.md`.
+- Generate `.env.example` files that align with `ENVIRONMENT_VARIABLES.md` tables and ensure `docs/DEV_SETUP.md` references them explicitly.
 
 **Exit criteria:** Clean lint/type/test on scaffolds; CI green; baseline Docker image builds.
 
@@ -86,6 +99,7 @@
 - Configure dependency injection (auth context placeholder, DB session).
 - Implement Alembic initial migration matching schema skeleton.
 - Add contract tests verifying endpoint structure & OpenAPI generation.
+- Validate config loader errors clearly when env vars like `DATABASE_URL`, `REDIS_URL`, `YAHOO_CLIENT_ID`, or encryption keys are unset so deploy scripts fail early.
 
 **Exit criteria:** Backend serves OpenAPI spec; endpoints return validated stub responses; migrations apply locally.
 
@@ -95,6 +109,7 @@
 - Ingest user leagues, teams, rosters, projections; persist to DB tables.
 - Expose `GET /me/leagues` and `GET /leagues/{league_key}/roster?week=` returning normalized JSON with optimizer placeholder.
 - Add fixtures and contract tests using recorded Yahoo responses.
+- Ensure OAuth settings honor `YAHOO_REDIRECT_URI`, `YAHOO_SCOPE`, and secure storage via `TOKEN_ENC_KEY` from env. Document how secrets are mounted locally vs Cloud Run.
 
 **Exit criteria:** Auth flow completes locally; league/roster endpoints backed by DB data; tests validate ingestion.
 
@@ -104,6 +119,7 @@
 - Implement `GET /games/live` and `GET /games/{event_id}/pbp` using ingested data.
 - Add caching (Redis) and guards for schema drift; include logging & metrics.
 - Expand contract tests with PyESPN fixtures covering live and completed games.
+- Respect polling cadence env vars (`PYESPN_SEASON_YEAR`, `PYESPN_POLL_MS`) and expose admin metrics so ops can monitor ingest health.
 
 **Exit criteria:** API surfaces game schedule and PBP data from DB; ingestion handles incremental updates; tests pass.
 
@@ -121,6 +137,7 @@
 - Add heartbeat/ping configuration (`WS_HEARTBEAT_SEC`).
 - Provide replay mode using stored plays for deterministic playback.
 - Load test WS fan-out (local harness) to validate design.
+- Surface connection metadata (heartbeat interval, enabled feature flags) via lightweight config endpoint so frontend can adapt using `NEXT_PUBLIC_WS_URL` and `NEXT_PUBLIC_ENV`.
 
 **Exit criteria:** WebSocket streams derived deltas with idempotent sequence; load tests meet 5k client target.
 
@@ -138,6 +155,7 @@
 - Build UI views: Dashboard, Optimizer, Waivers, Trade, Live Game Center (PixiJS field).
 - Integrate provenance badges (Yahoo vs PyESPN). Ensure WCAG AA compliance.
 - Add frontend testing (Jest + RTL) and visual regression (Storybook/Chromatic optional).
+- Wire environment-aware config module that validates `NEXT_PUBLIC_*` vars at build time and mirrors backend feature flag exposure for consistency.
 
 **Exit criteria:** Frontend renders data from live backend stubs; game center animates sample fixtures; accessibility checks pass.
 
@@ -158,6 +176,8 @@
 - **Feature Flags:** `FEATURE_WEATHER`, `FEATURE_REPLAY`, `NEXT_PUBLIC_ENV` to gate optional functionality.
 - **Accessibility & UX:** Conduct keyboard navigation tests; ensure contrast ratios; provide explanatory tooltips.
 - **Compliance:** Attribute data sources; ensure no redistribution of assets.
+- **Documentation Feedback Loop:** Keep `docs/architecture/` and `docs/api/` synchronized with scaffold updates; log deltas in `CHANGELOG.md` for downstream agents.
+- **Environment Drift Checks:** Add smoke tests verifying backend `API_BASE_URL` and frontend `NEXT_PUBLIC_API_URL` alignment before promotion.
 
 ---
 
