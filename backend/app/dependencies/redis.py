@@ -23,5 +23,4 @@ async def provide_redis_client(
     try:
         yield client
     finally:
-        await client.close()
-        await client.wait_closed()
+        await client.aclose()

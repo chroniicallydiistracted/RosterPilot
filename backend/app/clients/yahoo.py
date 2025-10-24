@@ -21,7 +21,7 @@ class YahooClient:
     http_client: httpx.AsyncClient | None = None
 
     BASE_URL: ClassVar[str] = "https://fantasysports.yahooapis.com/fantasy/v2"
-    TOKEN_ENDPOINT: ClassVar[str] = "https://api.login.yahoo.com/oauth2/get_token"
+    TOKEN_ENDPOINT_URL: ClassVar[str] = "https://api.login.yahoo.com/oauth2/get_token"
     USER_INFO_ENDPOINT: ClassVar[str] = "https://api.login.yahoo.com/openid/v1/userinfo"
 
     async def fetch_user_bundle(self) -> YahooUserBundle:
@@ -36,7 +36,7 @@ class YahooClient:
         # Yahoo Fantasy API responses. This placeholder guards future work.
         raise NotImplementedError("Live Yahoo API integration is pending implementation.")
 
-    async def __aenter__(self) -> "YahooClient":  # pragma: no cover - context helper
+    async def __aenter__(self) -> YahooClient:  # pragma: no cover - context helper
         if self.http_client is None:
             self.http_client = httpx.AsyncClient(timeout=httpx.Timeout(15.0, read=30.0))
         return self

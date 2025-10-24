@@ -1,6 +1,7 @@
 """Redis client scaffolding for caching and pub/sub."""
 
 from dataclasses import dataclass
+from typing import cast
 
 import redis.asyncio as redis
 
@@ -17,4 +18,5 @@ class RedisClientFactory:
         """Instantiate an async Redis client configured for Upstash."""
         if not self.settings.redis_url:
             raise ValueError("REDIS_URL is not configured.")
-        return redis.from_url(self.settings.redis_url, decode_responses=True)
+        client = redis.from_url(self.settings.redis_url, decode_responses=True)
+        return cast(redis.Redis, client)

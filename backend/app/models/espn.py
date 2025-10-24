@@ -75,7 +75,7 @@ class Event(Base):
     away_id: Mapped[int] = mapped_column(
         Integer, ForeignKey("teams.espn_team_id", ondelete="RESTRICT"), nullable=False
     )
-    venue_id: Mapped[str] = mapped_column(
+    venue_id: Mapped[str | None] = mapped_column(
         String(32), ForeignKey("venues.venue_id", ondelete="SET NULL"), nullable=True
     )
 
