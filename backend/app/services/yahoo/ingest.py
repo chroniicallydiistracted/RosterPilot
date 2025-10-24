@@ -166,9 +166,23 @@ class YahooIngestionService:
             select(IdMap).where(IdMap.yahoo_player_id == player_data.yahoo_player_id)
         ).scalar_one_or_none()
         if id_map is None:
-            id_map = IdMap(yahoo_player_id=player_data.yahoo_player_id)
+            id_map = IdMap(
+                yahoo_player_id=player_data.yahoo_player_id,
+                full_name=player_data.full_name,
+                position=player_data.position,
+                team_abbr=player_data.team_abbr,
+                confidence=0.5 if player_data.projected_points is not None else 0.0,
+            )
             self.session.add(id_map)
             self.session.flush()
+        else:
+            if not id_map.is_manual:
+                id_map.full_name = player_data.full_name
+                id_map.position = player_data.position
+                if player_data.team_abbr:
+                    id_map.team_abbr = player_data.team_abbr
+            if player_data.projected_points is not None:
+                id_map.confidence = max(id_map.confidence, 0.5)
 
         if player_data.projected_points is None:
             return

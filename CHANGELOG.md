@@ -26,3 +26,12 @@ as we progress through the scaffold and implementation phases.
   implementations returning normalized responses from stored data.
 - Unit and contract test coverage for PyESPN ingestion along with updated
   test seeding to hydrate the SQLite test database.
+
+## [0.3.0] - 2025-10-23
+### Added
+- Reference seeding job that hydrates NFL teams and venues from captured ESPN
+  metadata, ensuring baseline data exists before live ingestion.
+- Canonical player reconciliation service, curated mapping dataset, and Alembic
+  migration `20251023_0004_canonical_mapping_seed` to harden the identifier map.
+- Unit tests validating the reference seeds, canonical mapping behavior, and
+  Yahoo ingestion resilience to manual overrides.

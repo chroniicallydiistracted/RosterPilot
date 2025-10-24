@@ -1,0 +1,42 @@
+[
+  {
+    "full_name": "Jalen Hurts",
+    "position": "QB",
+    "team_abbr": "PHI",
+    "yahoo_player_id": "257654",
+    "espn_player_id": "3915516",
+    "confidence": 1.0
+  },
+  {
+    "full_name": "Bijan Robinson",
+    "position": "RB",
+    "team_abbr": "ATL",
+    "yahoo_player_id": "272569",
+    "espn_player_id": "4569164",
+    "confidence": 1.0
+  },
+  {
+    "full_name": "Amon-Ra St. Brown",
+    "position": "WR",
+    "team_abbr": "DET",
+    "yahoo_player_id": "2482202",
+    "espn_player_id": "4362628",
+    "confidence": 1.0
+  },
+  {
+    "full_name": "James Conner",
+    "position": "RB",
+    "team_abbr": "ARI",
+    "yahoo_player_id": "301234",
+    "espn_player_id": "3051392",
+    "confidence": 1.0
+  },
+  {
+    "full_name": "Jordan Addison",
+    "position": "WR",
+    "team_abbr": "MIN",
+    "yahoo_player_id": "278998",
+    "espn_player_id": "4569168",
+    "confidence": 1.0
+  }
+]

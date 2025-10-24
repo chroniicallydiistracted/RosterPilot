@@ -7,6 +7,7 @@ from typing import Any
 
 from sqlalchemy import (
     JSON,
+    Boolean,
     DateTime,
     Float,
     ForeignKey,
@@ -17,6 +18,18 @@ from sqlalchemy import (
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.models.base import Base
+
+
+class Athlete(Base):
+    """ESPN athlete metadata used for canonical player mapping."""
+
+    __tablename__ = "espn_players"
+
+    espn_player_id: Mapped[str] = mapped_column(String(16), primary_key=True)
+    full_name: Mapped[str] = mapped_column(String(128), nullable=False)
+    position: Mapped[str | None] = mapped_column(String(16), nullable=True)
+    team_abbr: Mapped[str | None] = mapped_column(String(8), nullable=True)
+    active: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
 
 
 class Team(Base):
