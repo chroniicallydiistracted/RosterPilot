@@ -1,25 +1,24 @@
-"""Game-centric endpoints backed by PyESPN fixtures (stubbed)."""
+"""Game-centric endpoints backed by persisted PyESPN data."""
 
 from typing import Annotated
 
 from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
 
-from app.core.config import Settings
-from app.dependencies.settings import provide_settings
+from app.dependencies.database import provide_db_session
 from app.schemas.games import LiveGamesResponse, PlayByPlayResponse
-from app.services.games import get_live_games_stub, get_play_by_play_stub
+from app.services.games import get_play_by_play, list_live_games
 
 router = APIRouter(prefix="/games", tags=["games"])
 
-SettingsDep = Annotated[Settings, Depends(provide_settings)]
+SessionDep = Annotated[Session, Depends(provide_db_session)]
 
 
 @router.get("/live", summary="List currently live NFL games", response_model=LiveGamesResponse)
-async def list_live_games(settings: SettingsDep) -> LiveGamesResponse:
-    """Return a sample set of live games sourced from PyESPN fixtures."""
+async def list_live_games_route(session: SessionDep) -> LiveGamesResponse:
+    """Return live game snapshots sourced from PyESPN ingestion."""
 
-    _ = settings
-    return get_live_games_stub()
+    return list_live_games(session)
 
 
 @router.get(
@@ -27,11 +26,10 @@ async def list_live_games(settings: SettingsDep) -> LiveGamesResponse:
     summary="Retrieve normalized play-by-play for an event",
     response_model=PlayByPlayResponse,
 )
-async def get_play_by_play(
+async def get_play_by_play_route(
     event_id: str,
-    settings: SettingsDep,
+    session: SessionDep,
 ) -> PlayByPlayResponse:
-    """Return a stubbed play-by-play payload suitable for contract testing."""
+    """Return normalized play-by-play data for an event."""
 
-    _ = settings
-    return get_play_by_play_stub(event_id=event_id)
+    return get_play_by_play(session, event_id=event_id)

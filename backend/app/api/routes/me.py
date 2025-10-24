@@ -3,18 +3,21 @@
 from typing import Annotated
 
 from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
 
 from app.core.config import Settings
+from app.dependencies import provide_db_session
 from app.dependencies.auth import provide_auth_context
 from app.dependencies.settings import provide_settings
 from app.schemas.leagues import UserLeaguesResponse
-from app.services.leagues import get_user_leagues_stub
+from app.services.leagues import list_user_leagues as list_user_leagues_service
 from app.services.models import AuthContext
 
 router = APIRouter(prefix="/me", tags=["me"])
 
 SettingsDep = Annotated[Settings, Depends(provide_settings)]
 AuthContextDep = Annotated[AuthContext, Depends(provide_auth_context)]
+SessionDep = Annotated[Session, Depends(provide_db_session)]
 
 
 @router.get(
@@ -25,10 +28,9 @@ AuthContextDep = Annotated[AuthContext, Depends(provide_auth_context)]
 async def list_user_leagues(
     settings: SettingsDep,
     auth: AuthContextDep,
+    session: SessionDep,
 ) -> UserLeaguesResponse:
     """Return the leagues discovered for the current Yahoo identity."""
 
-    # Settings and auth are accepted to demonstrate dependency wiring for later phases.
-    # They are not yet used by the scaffold implementation.
-    _ = (settings, auth)
-    return get_user_leagues_stub()
+    _ = settings
+    return list_user_leagues_service(session=session, auth=auth)

@@ -6,7 +6,7 @@ from typing import Any
 import sentry_sdk
 from fastapi import APIRouter, FastAPI
 
-from app.api.routes import games, health, leagues, me
+from app.api.routes import games, health, leagues, me, oauth
 from app.core.config import get_settings
 
 
@@ -31,26 +31,30 @@ def create_app() -> FastAPI:
     # Initialize OpenTelemetry for distributed tracing in production.
     # This uses the application's default credentials on Cloud Run.
     if instrumentation_enabled:
-        from opentelemetry import trace
-        from opentelemetry.exporter.cloud_trace import CloudTraceSpanExporter
-        from opentelemetry.instrumentation.fastapi import (
-            FastAPIInstrumentor,  # type: ignore[import]
-        )
-        from opentelemetry.instrumentation.httpx import (
-            HTTPXClientInstrumentor,  # type: ignore[import]
-        )
-        from opentelemetry.sdk.trace import TracerProvider
-        from opentelemetry.sdk.trace.export import BatchSpanProcessor
+        try:
+            from opentelemetry import trace
+            from opentelemetry.exporter.cloud_trace import CloudTraceSpanExporter
+            from opentelemetry.instrumentation.fastapi import (
+                FastAPIInstrumentor,  # type: ignore[import]
+            )
+            from opentelemetry.instrumentation.httpx import (
+                HTTPXClientInstrumentor,  # type: ignore[import]
+            )
+            from opentelemetry.sdk.trace import TracerProvider
+            from opentelemetry.sdk.trace.export import BatchSpanProcessor
 
-        tracer_provider = TracerProvider()
-        exporter = GoogleCloudTraceSpanExporter()
-        processor = BatchSpanProcessor(exporter)
-        tracer_provider.add_span_processor(processor)
-        trace.set_tracer_provider(tracer_provider)
+            tracer_provider = TracerProvider()
+            exporter = CloudTraceSpanExporter()
+            processor = BatchSpanProcessor(exporter)
+            tracer_provider.add_span_processor(processor)
+            trace.set_tracer_provider(tracer_provider)
 
-        # Instrument httpx to trace outgoing requests
-        HTTPXClientInstrumentor().instrument()
-        fastapi_instrumentor = FastAPIInstrumentor
+            # Instrument httpx to trace outgoing requests
+            HTTPXClientInstrumentor().instrument()
+            fastapi_instrumentor = FastAPIInstrumentor
+        except Exception:  # pragma: no cover - diagnostics for missing credentials
+            instrumentation_enabled = False
+            fastapi_instrumentor = None
 
     app = FastAPI(
         title="RosterPilot API",
@@ -70,6 +74,7 @@ def create_app() -> FastAPI:
     app.include_router(health.router)
 
     api_router = APIRouter()
+    api_router.include_router(oauth.router)
     api_router.include_router(me.router)
     api_router.include_router(leagues.router)
     api_router.include_router(games.router)

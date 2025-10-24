@@ -207,5 +207,8 @@
 ## 6. Completion Log
 - [x] Phase 1 — Infra bootstrap: Repository layout, shared tooling, `.env` template updates, and CI workflow (`.github/workflows/ci.yml`).
 - [x] Phase 2 — Backend skeleton: FastAPI routers (`/me/leagues`, `/leagues/{league_key}/roster`, `/games/live`, `/games/{event_id}/pbp`), Pydantic schemas, SQLAlchemy models, Alembic environment with initial migration, and contract tests validating OpenAPI output.
+- [x] Environment parity — Added checked-in environment templates (`backend/.env.example`, `frontend/.env.production.example`), strengthened configuration validation for required secrets, and introduced unit tests covering settings parsing.
+- [x] Phase 3 — Yahoo Auth + Read Model: OAuth authorize/callback endpoints with encrypted token storage, Yahoo ingestion service seeding leagues/teams/rosters from fixtures, persistence migrations, and contract/integration tests covering the authenticated flow.
+- [x] Phase 4 — PyESPN ingestion: HTTP client wrapper, scoreboard/play-by-play ingestion into Postgres, expanded schema/migration for event states, database-backed `/games` APIs, deterministic fixtures, and unit/contract tests covering the live games and play-by-play surfaces.
 
 Prepared by: **Lead Architect Agent**

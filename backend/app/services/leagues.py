@@ -1,159 +1,132 @@
-"""Stub implementations for Yahoo league and roster workflows."""
+"""League and roster services backed by the persistence layer."""
 
 from __future__ import annotations
 
 from datetime import UTC, datetime
 
+from sqlalchemy import Select, select
+from sqlalchemy.orm import Session
+
+from app.models.yahoo import YahooLeague, YahooPlayer, YahooRoster, YahooTeam
 from app.schemas.leagues import (
     LeagueRosterResponse,
+    LeagueSummary,
     OptimizerInsight,
     PlayerProjection,
     RosterSlot,
     TeamSummary,
     UserLeaguesResponse,
 )
+from app.services.models import AuthContext
 
 
-def get_user_leagues_stub() -> UserLeaguesResponse:
-    """Return a deterministic set of leagues for contract testing."""
-
-    generated_at = datetime.now(tz=UTC)
-    leagues = [
-        {
-            "league_key": "nfl.l.12345",
-            "season": 2024,
-            "name": "RosterPilot Analytics League",
-            "scoring_type": "points_per_reception",
-            "status": "in_season",
-            "my_team": {
-                "team_key": "nfl.l.12345.t.1",
-                "name": "Phoenix Firebirds",
-                "manager": "Taylor Jenkins",
-            },
-            "source": "yahoo",
-            "last_synced": generated_at,
-        },
-        {
-            "league_key": "nfl.l.98765",
-            "season": 2024,
-            "name": "Data Wizards Dynasty",
-            "scoring_type": "half_ppr",
-            "status": "pre_draft",
-            "my_team": {
-                "team_key": "nfl.l.98765.t.3",
-                "name": "Desert Analytics",
-                "manager": "Taylor Jenkins",
-            },
-            "source": "yahoo",
-            "last_synced": generated_at,
-        },
-    ]
-
-    return UserLeaguesResponse.model_validate({"generated_at": generated_at, "leagues": leagues})
-
-
-def get_league_roster_stub(league_key: str, week: int) -> LeagueRosterResponse:
-    """Return a mock roster response with optimizer rationale."""
+def list_user_leagues(session: Session, auth: AuthContext) -> UserLeaguesResponse:
+    """Return the leagues available to the authenticated Yahoo user."""
 
     generated_at = datetime.now(tz=UTC)
+    league_query: Select[tuple[YahooLeague]] = select(YahooLeague).where(YahooLeague.user_id == auth.user_id)
+    leagues: list[LeagueSummary] = []
 
-    starters = [
-        RosterSlot(
-            slot="QB",
-            player=PlayerProjection(
-                yahoo_player_id="257654",
-                full_name="Jalen Hurts",
-                team_abbr="PHI",
-                position="QB",
-                status="ACTIVE",
-                projected_points=24.3,
-                actual_points=None,
-            ),
-            recommended=True,
-            locked=False,
-        ),
-        RosterSlot(
-            slot="RB1",
-            player=PlayerProjection(
-                yahoo_player_id="272569",
-                full_name="Bijan Robinson",
-                team_abbr="ATL",
-                position="RB",
-                status="ACTIVE",
-                projected_points=18.7,
-                actual_points=None,
-            ),
-            recommended=True,
-            locked=False,
-        ),
-        RosterSlot(
-            slot="WR1",
-            player=PlayerProjection(
-                yahoo_player_id="2482202",
-                full_name="Amon-Ra St. Brown",
-                team_abbr="DET",
-                position="WR",
-                status="QUESTIONABLE",
-                projected_points=17.9,
-                actual_points=None,
-            ),
-            recommended=True,
-            locked=False,
-        ),
-    ]
+    for league in session.execute(league_query).scalars().all():
+        my_team = session.execute(
+            select(YahooTeam).where(
+                YahooTeam.league_key == league.league_key,
+                YahooTeam.is_user_team.is_(True),
+            )
+        ).scalar_one_or_none()
 
-    bench = [
-        RosterSlot(
-            slot="BENCH",
-            player=PlayerProjection(
-                yahoo_player_id="301234",
-                full_name="James Conner",
-                team_abbr="ARI",
-                position="RB",
-                status="ACTIVE",
-                projected_points=11.2,
-                actual_points=None,
-            ),
-            recommended=False,
-            locked=False,
-        ),
-        RosterSlot(
-            slot="BENCH",
-            player=PlayerProjection(
-                yahoo_player_id="278998",
-                full_name="Jordan Addison",
-                team_abbr="MIN",
-                position="WR",
-                status="ACTIVE",
-                projected_points=10.4,
-                actual_points=None,
-            ),
-            recommended=False,
-            locked=False,
-        ),
-    ]
+        if my_team is None:
+            continue
 
-    optimizer = OptimizerInsight(
-        recommended_starters=[slot.player.full_name for slot in starters],
-        delta_points=8.6,
-        rationale=[
-            "Higher median projection versus current lineup",
-            "Favorable pace-of-play matchup",
-            "Weather impact negligible (indoor venue)",
-        ],
-        source="optimizer",
-    )
+        leagues.append(
+            LeagueSummary(
+                league_key=league.league_key,
+                season=league.season,
+                name=league.name,
+                scoring_type=league.scoring_json.get("scoring_type", league.scoring_json.get("type", "")),
+                status=league.status,
+                my_team=TeamSummary(
+                    team_key=my_team.team_key,
+                    name=my_team.name,
+                    manager=my_team.manager,
+                ),
+                last_synced=league.last_synced,
+            )
+        )
+
+    return UserLeaguesResponse(generated_at=generated_at, leagues=leagues)
+
+
+def get_league_roster(session: Session, auth: AuthContext, league_key: str, week: int) -> LeagueRosterResponse:
+    """Return a roster payload including lightweight optimizer hints."""
+
+    team = session.execute(
+        select(YahooTeam).where(
+            YahooTeam.league_key == league_key,
+            YahooTeam.is_user_team.is_(True),
+        )
+    ).scalar_one_or_none()
+
+    if team is None:
+        raise ValueError(f"No roster found for user in league {league_key}")
+
+    roster_rows = session.execute(
+        select(YahooRoster, YahooPlayer)
+        .join(YahooPlayer, YahooPlayer.yahoo_player_id == YahooRoster.yahoo_player_id, isouter=True)
+        .where(YahooRoster.team_key == team.team_key, YahooRoster.week == week)
+    ).all()
+
+    starters: list[RosterSlot] = []
+    bench: list[RosterSlot] = []
+
+    for roster, player in roster_rows:
+        projection = _build_player_projection(roster, player)
+        slot = RosterSlot(
+            slot=roster.slot,
+            player=projection,
+            recommended=roster.is_starter,
+            locked=False,
+        )
+        if roster.is_starter:
+            starters.append(slot)
+        else:
+            bench.append(slot)
+
+    optimizer = _build_optimizer_summary(starters, bench)
 
     return LeagueRosterResponse(
         league_key=league_key,
         week=week,
-        team=TeamSummary(
-            team_key="nfl.l.12345.t.1",
-            name="Phoenix Firebirds",
-            manager="Taylor Jenkins",
-        ),
-        generated_at=generated_at,
+        team=TeamSummary(team_key=team.team_key, name=team.name, manager=team.manager),
+        generated_at=datetime.now(tz=UTC),
         starters=starters,
         bench=bench,
         optimizer=optimizer,
     )
+
+
+def _build_player_projection(roster: YahooRoster, player: YahooPlayer | None) -> PlayerProjection:
+    return PlayerProjection(
+        yahoo_player_id=player.yahoo_player_id if player else "unknown",
+        full_name=player.name if player else "TBD",
+        team_abbr=player.team_abbr if player else "FA",
+        position=player.pos if player else "N/A",
+        status=player.status if player else "UNKNOWN",
+        projected_points=roster.projected_points,
+        actual_points=roster.actual_points,
+    )
+
+
+def _build_optimizer_summary(starters: list[RosterSlot], bench: list[RosterSlot]) -> OptimizerInsight:
+    starter_total = sum(slot.player.projected_points for slot in starters)
+    bench_total = sum(slot.player.projected_points for slot in bench) or 0.0
+    delta_points = max(0.0, round(starter_total - bench_total, 1))
+
+    rationale = [
+        "Projected starters outpace bench depth by {:.1f} points".format(delta_points),
+        "Monitor injuries before lock" if any(slot.player.status not in {"ACTIVE", "OK"} for slot in starters) else "Lineup healthy",
+        "Weather impact negligible based on indoor matchups",
+    ]
+
+    recommended = [slot.player.full_name for slot in sorted(starters, key=lambda s: s.player.projected_points, reverse=True)]
+    return OptimizerInsight(recommended_starters=recommended, delta_points=delta_points, rationale=rationale)
