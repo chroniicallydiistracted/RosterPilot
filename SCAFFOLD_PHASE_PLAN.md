@@ -213,5 +213,8 @@
 - [x] Phase 5 — Database schema hardening & migrations: Added canonical player mapping enhancements, ESPN athlete table,
   reference data seed jobs for teams/venues, curated canonical player dataset, and unit tests guarding id-map integrity
   alongside schema migration `20251023_0004_canonical_mapping_seed`.
+- [x] Phase 6 — Realtime hub: Redis-backed pub/sub abstraction, `/ws/games/{event_id}` WebSocket with heartbeat and replay
+  streaming, runtime config endpoint surfacing feature flags and heartbeat interval, and integration tests covering live
+  delta + replay flows with deterministic fixtures.
 
 Prepared by: **Lead Architect Agent**

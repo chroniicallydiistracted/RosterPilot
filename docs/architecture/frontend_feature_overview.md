@@ -20,6 +20,8 @@ contracts or environment toggles each surface depends on.
     `/ws/games/{event_id}` live deltas.
   - `NEXT_PUBLIC_ENV` – gates optional UI (e.g., weather overlays when
     `FEATURE_WEATHER` is enabled server-side).
+  - Fetch `/api/meta/config` during bootstrap to confirm heartbeat
+    interval, feature flags, and websocket paths exposed by the backend.
   - Cross-origin URLs must stay in sync with backend
     `APP_BASE_URL`/`API_BASE_URL` and `CORS_ALLOWED_ORIGINS`.
 

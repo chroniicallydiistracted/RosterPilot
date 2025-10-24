@@ -107,7 +107,7 @@ def get_play_by_play(session: Session, event_id: str) -> PlayByPlayResponse:
                 result=drive.result or "Unknown",
                 start_clock=drive.start_clock or "0:00",
                 end_clock=drive.end_clock or drive.start_clock or "0:00",
-                plays=[_play_detail(play) for play in plays_by_drive.get(drive.drive_id, [])],
+                plays=[build_play_detail(play) for play in plays_by_drive.get(drive.drive_id, [])],
             )
         )
 
@@ -163,7 +163,7 @@ def _resolve_drive_team(team_id: int | None, home: Team, away: Team) -> Team:
     return home
 
 
-def _play_detail(play: Play) -> PlayDetail:
+def build_play_detail(play: Play) -> PlayDetail:
     raw = play.raw_json or {}
     quarter = play.quarter or (raw.get("period") or {}).get("number") or 1
     clock = play.clock or (raw.get("clock") or {}).get("displayValue") or "0:00"
