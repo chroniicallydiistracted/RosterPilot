@@ -43,7 +43,7 @@ def create_app() -> FastAPI:
         from opentelemetry.sdk.trace.export import BatchSpanProcessor
 
         tracer_provider = TracerProvider()
-        exporter = CloudTraceSpanExporter()
+        exporter = GoogleCloudTraceSpanExporter()
         processor = BatchSpanProcessor(exporter)
         tracer_provider.add_span_processor(processor)
         trace.set_tracer_provider(tracer_provider)
