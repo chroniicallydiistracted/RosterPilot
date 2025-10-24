@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import uuid
+from dataclasses import dataclass
 from datetime import UTC, datetime
 
 from sqlalchemy import delete, select
@@ -13,6 +14,17 @@ from app.models.user import OAuthToken, User
 from app.models.yahoo import YahooLeague, YahooPlayer, YahooRoster, YahooTeam
 from app.security.crypto import TokenCipher
 from app.services.yahoo.models import YahooLeagueData, YahooRosterEntry, YahooUserBundle
+
+
+@dataclass(slots=True)
+class TokenPayload:
+    """Container for OAuth tokens returned from Yahoo exchanges."""
+
+    provider: str
+    access_token: str
+    refresh_token: str
+    expires_at: datetime
+    scopes: str | None = None
 
 
 class YahooIngestionService:
@@ -29,25 +41,19 @@ class YahooIngestionService:
         self._upsert_leagues(user.user_id, bundle)
         return user
 
-    def store_tokens(
-        self,
-        user: User,
-        provider: str,
-        access_token: str,
-        refresh_token: str,
-        expires_at: datetime,
-        scopes: str,
-    ) -> OAuthToken:
+    def store_tokens(self, user: User, payload: TokenPayload) -> OAuthToken:
         """Persist encrypted OAuth tokens for the user."""
 
-        encrypted_access = self.cipher.encrypt(access_token)
-        encrypted_refresh = self.cipher.encrypt(refresh_token)
+        encrypted_access = self.cipher.encrypt(payload.access_token)
+        encrypted_refresh = self.cipher.encrypt(payload.refresh_token)
+        provider = payload.provider
+        scopes = payload.scopes or ""
 
         existing = self.session.get(OAuthToken, (user.user_id, provider))
         if existing:
             existing.access_token = encrypted_access
             existing.refresh_token = encrypted_refresh
-            existing.expires_at = expires_at
+            existing.expires_at = payload.expires_at
             existing.scopes = scopes
             token = existing
         else:
@@ -56,7 +62,7 @@ class YahooIngestionService:
                 provider=provider,
                 access_token=encrypted_access,
                 refresh_token=encrypted_refresh,
-                expires_at=expires_at,
+                expires_at=payload.expires_at,
                 scopes=scopes,
             )
             self.session.add(token)
