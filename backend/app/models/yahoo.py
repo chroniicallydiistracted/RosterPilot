@@ -60,8 +60,8 @@ class YahooPlayer(Base):
     yahoo_player_id: Mapped[str] = mapped_column(String(64), primary_key=True)
     name: Mapped[str] = mapped_column(String(128), nullable=False)
     pos: Mapped[str] = mapped_column(String(16), nullable=False)
-    team_abbr: Mapped[str] = mapped_column(String(8), nullable=True)
-    status: Mapped[str] = mapped_column(String(32), nullable=True)
+    team_abbr: Mapped[str | None] = mapped_column(String(8), nullable=True)
+    status: Mapped[str | None] = mapped_column(String(32), nullable=True)
     bye_week: Mapped[int | None] = mapped_column(Integer, nullable=True)
 
 

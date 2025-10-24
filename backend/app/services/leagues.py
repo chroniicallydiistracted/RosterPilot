@@ -81,11 +81,22 @@ def get_league_roster(session: Session, auth: AuthContext, league_key: str, week
     if team is None:
         raise ValueError(f"No roster found for user in league {league_key}")
 
-    roster_rows = session.execute(
-        select(YahooRoster, YahooPlayer)
-        .join(YahooPlayer, YahooPlayer.yahoo_player_id == YahooRoster.yahoo_player_id, isouter=True)
-        .where(YahooRoster.team_key == team.team_key, YahooRoster.week == week)
-    ).all()
+    roster_result = (
+        session.execute(
+            select(YahooRoster, YahooPlayer)
+            .join(
+                YahooPlayer,
+                YahooPlayer.yahoo_player_id == YahooRoster.yahoo_player_id,
+                isouter=True,
+            )
+            .where(YahooRoster.team_key == team.team_key, YahooRoster.week == week)
+        )
+        .tuples()
+        .all()
+    )
+    roster_rows: list[tuple[YahooRoster, YahooPlayer | None]] = [
+        (roster, player) for roster, player in roster_result
+    ]
 
     (
         starters,

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
+from dataclasses import dataclass
 from datetime import UTC, datetime
 from typing import Any
 
@@ -10,6 +11,26 @@ from sqlalchemy import delete
 from sqlalchemy.orm import Session
 
 from app.models.espn import Drive, Event, EventState, Play, Team, Venue
+
+
+@dataclass(slots=True)
+class EventContext:
+    season: int
+    week: int
+    start_ts: datetime
+    status_name: str
+    home_team: Team
+    away_team: Team
+    venue: Venue | None
+
+
+@dataclass(slots=True)
+class EventStateContext:
+    status_type: dict[str, Any]
+    competition: dict[str, Any]
+    teams_by_home_away: dict[str, dict[str, Any]]
+    situation: dict[str, Any]
+    possession_abbr: str | None
 
 
 class PyESPNIngestionService:
@@ -47,53 +68,35 @@ class PyESPNIngestionService:
             away_team = self._upsert_team(teams_by_home_away["away"])
             venue = self._upsert_venue(competition.get("venue") or {})
 
-            db_event = self.session.get(Event, event_id)
-            if db_event is None:
-                db_event = Event(
-                    event_id=event_id,
-                    season=season,
-                    week=week,
-                    start_ts=start_ts,
-                    status=status_type.get("name", "UNKNOWN"),
-                    home_id=home_team.espn_team_id,
-                    away_id=away_team.espn_team_id,
-                    venue_id=venue.venue_id if venue else None,
-                )
-                self.session.add(db_event)
-            else:
-                db_event.season = season
-                db_event.week = week
-                db_event.start_ts = start_ts
-                db_event.status = status_type.get("name", db_event.status)
-                db_event.home_id = home_team.espn_team_id
-                db_event.away_id = away_team.espn_team_id
-                db_event.venue_id = venue.venue_id if venue else None
+            context = EventContext(
+                season=season,
+                week=week,
+                start_ts=start_ts,
+                status_name=status_type.get("name", "UNKNOWN"),
+                home_team=home_team,
+                away_team=away_team,
+                venue=venue,
+            )
+            self._upsert_event(event_id=event_id, context=context)
 
             situation = competition.get("situation") or {}
             possession_id = situation.get("possession")
             possession_abbr = None
             if possession_id is not None:
-                possession_team = _lookup_team_by_id(
-                    teams_by_home_away, str(possession_id)
-                )
-                possession_abbr = possession_team.get("team", {}).get("abbreviation") if possession_team else None
+                possession_team = _lookup_team_by_id(teams_by_home_away, str(possession_id))
+                if possession_team:
+                    team_payload = possession_team.get("team") or {}
+                    possession_abbr = team_payload.get("abbreviation")
 
-            state = self.session.get(EventState, event_id)
-            if state is None:
-                state = EventState(event_id=event_id, broadcast_json={})
-                self.session.add(state)
-
-            state.status = status_type.get("description", "Final")
-            state.status_detail = status_type.get("shortDetail")
-            state.quarter = competition.get("status", {}).get("period")
-            state.clock = competition.get("status", {}).get("displayClock")
-            state.possession = possession_abbr
-            state.home_score = int(teams_by_home_away["home"].get("score", 0))
-            state.away_score = int(teams_by_home_away["away"].get("score", 0))
-            state.home_timeouts = situation.get("homeTimeouts")
-            state.away_timeouts = situation.get("awayTimeouts")
-            state.broadcast_json = _normalize_broadcasts(competition.get("broadcasts") or [])
-            state.last_update = datetime.now(tz=UTC)
+            state = self._ensure_event_state(event_id)
+            state_context = EventStateContext(
+                status_type=status_type,
+                competition=competition,
+                teams_by_home_away=teams_by_home_away,
+                situation=situation,
+                possession_abbr=possession_abbr,
+            )
+            self._update_event_state(state=state, context=state_context)
 
         return event_ids
 
@@ -197,7 +200,7 @@ class PyESPNIngestionService:
             raise ValueError("Drive payload missing team id")
         team = self.session.get(Team, team_id)
         if team is None:
-            # Drives payload includes richer logo sets – seed minimal placeholders.
+            # Drives payload includes richer logo sets - seed minimal placeholders.
             team = Team(
                 espn_team_id=team_id,
                 name=team_payload.get("displayName", team_payload.get("name", "Unknown")),
@@ -211,6 +214,57 @@ class PyESPNIngestionService:
             if logos:
                 team.logos_json = logos
         return team
+
+    def _upsert_event(self, *, event_id: str, context: EventContext) -> Event:
+        event = self.session.get(Event, event_id)
+        if event is None:
+            event = Event(
+                event_id=event_id,
+                season=context.season,
+                week=context.week,
+                start_ts=context.start_ts,
+                status=context.status_name,
+                home_id=context.home_team.espn_team_id,
+                away_id=context.away_team.espn_team_id,
+                venue_id=context.venue.venue_id if context.venue else None,
+            )
+            self.session.add(event)
+            return event
+
+        event.season = context.season
+        event.week = context.week
+        event.start_ts = context.start_ts
+        if context.status_name:
+            event.status = context.status_name
+        event.home_id = context.home_team.espn_team_id
+        event.away_id = context.away_team.espn_team_id
+        event.venue_id = context.venue.venue_id if context.venue else None
+        return event
+
+    def _ensure_event_state(self, event_id: str) -> EventState:
+        state = self.session.get(EventState, event_id)
+        if state is None:
+            state = EventState(event_id=event_id, broadcast_json={})
+            self.session.add(state)
+        return state
+
+    def _update_event_state(self, *, state: EventState, context: EventStateContext) -> None:
+        scoreboard_status = context.competition.get("status") or {}
+        status_description = context.status_type.get("description")
+        state.status = (
+            status_description if isinstance(status_description, str) else "Final"
+        )
+        status_detail = context.status_type.get("shortDetail")
+        state.status_detail = status_detail if isinstance(status_detail, str) else None
+        state.quarter = scoreboard_status.get("period")
+        state.clock = scoreboard_status.get("displayClock")
+        state.possession = context.possession_abbr
+        state.home_score = int(context.teams_by_home_away["home"].get("score", 0))
+        state.away_score = int(context.teams_by_home_away["away"].get("score", 0))
+        state.home_timeouts = context.situation.get("homeTimeouts")
+        state.away_timeouts = context.situation.get("awayTimeouts")
+        state.broadcast_json = _normalize_broadcasts(context.competition.get("broadcasts") or [])
+        state.last_update = datetime.now(tz=UTC)
 
     def _upsert_venue(self, venue_payload: dict[str, Any]) -> Venue | None:
         venue_id = venue_payload.get("id")
@@ -231,9 +285,11 @@ class PyESPNIngestionService:
             self.session.add(venue)
         else:
             venue.name = venue_payload.get("fullName", venue.name)
-            venue.city = (venue_payload.get("address") or {}).get("city", venue.city)
-            venue.state = (venue_payload.get("address") or {}).get("state", venue.state)
-            venue.roof_type = "indoor" if venue_payload.get("indoor") else venue_payload.get("roofType")
+            address = venue_payload.get("address") or {}
+            venue.city = address.get("city", venue.city)
+            venue.state = address.get("state", venue.state)
+            roof_type = "indoor" if venue_payload.get("indoor") else venue_payload.get("roofType")
+            venue.roof_type = roof_type
             venue.surface = venue_payload.get("surface", venue.surface)
         return venue
 

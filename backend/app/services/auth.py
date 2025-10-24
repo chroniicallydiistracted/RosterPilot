@@ -4,16 +4,17 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
-from typing import Any
+from typing import Any, cast
 from urllib.parse import urlencode
 
 import httpx
+from sqlalchemy.orm import Session
 
 from app.clients.yahoo import YahooClient
 from app.core.config import Settings
 from app.security.crypto import TokenCipher
 from app.security.state import OAuthStateManager
-from app.services.yahoo.ingest import YahooIngestionService
+from app.services.yahoo.ingest import TokenPayload, YahooIngestionService
 from app.services.yahoo.models import YahooUserBundle
 
 
@@ -50,7 +51,7 @@ class YahooOAuthService:
     async def exchange_code(self, code: str) -> dict[str, Any]:
         """Exchange the authorization code for Yahoo tokens."""
 
-        token_endpoint = YahooClient.TOKEN_ENDPOINT
+        token_endpoint = YahooClient.TOKEN_ENDPOINT_URL
         auth = (self.settings.yahoo_client_id or "", self.settings.yahoo_client_secret or "")
         payload = {
             "grant_type": "authorization_code",
@@ -59,7 +60,7 @@ class YahooOAuthService:
         }
         response = await self._http_client.post(token_endpoint, auth=auth, data=payload)
         response.raise_for_status()
-        return response.json()
+        return cast(dict[str, Any], response.json())
 
     async def fetch_user_info(self, access_token: str) -> dict[str, Any]:
         """Retrieve OpenID profile information for the authenticated Yahoo user."""
@@ -67,13 +68,13 @@ class YahooOAuthService:
         headers = {"Authorization": f"Bearer {access_token}"}
         response = await self._http_client.get(YahooClient.USER_INFO_ENDPOINT, headers=headers)
         response.raise_for_status()
-        return response.json()
+        return cast(dict[str, Any], response.json())
 
     async def handle_callback(
         self,
         code: str,
         state: str,
-        session,
+        session: Session,
     ) -> OAuthExchangeResult:
         """Process the OAuth callback and trigger ingestion."""
 
@@ -99,11 +100,13 @@ class YahooOAuthService:
         user = ingestion.ingest_bundle(bundle)
         ingestion.store_tokens(
             user=user,
-            provider="yahoo",
-            access_token=access_token,
-            refresh_token=refresh_token,
-            expires_at=expires_at,
-            scopes=scopes,
+            payload=TokenPayload(
+                provider="yahoo",
+                access_token=access_token,
+                refresh_token=refresh_token,
+                expires_at=expires_at,
+                scopes=scopes,
+            ),
         )
 
         session.commit()
