@@ -216,5 +216,7 @@
 - [x] Phase 6 — Realtime hub: Redis-backed pub/sub abstraction, `/ws/games/{event_id}` WebSocket with heartbeat and replay
   streaming, runtime config endpoint surfacing feature flags and heartbeat interval, and integration tests covering live
   delta + replay flows with deterministic fixtures.
+- [x] Phase 7 — Optimizer v1: Added solver-backed lineup optimizer with CP-SAT + greedy fallback, slot/position normalization
+  helpers, API response updates surfacing recommended starters and rationale, and unit tests covering optimizer heuristics.
 
 Prepared by: **Lead Architect Agent**
