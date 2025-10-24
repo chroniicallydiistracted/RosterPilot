@@ -1,7 +1,7 @@
 """Application configuration and environment management."""
 
 from functools import lru_cache
-from typing import Literal, Optional
+from typing import Literal
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -15,13 +15,13 @@ class Settings(BaseSettings):
     api_prefix: str = "/api"
 
     # Infrastructure providers
-    database_url: Optional[str] = None
-    redis_url: Optional[str] = None
+    database_url: str | None = None
+    redis_url: str | None = None
 
     # Yahoo OAuth
-    yahoo_client_id: Optional[str] = None
-    yahoo_client_secret: Optional[str] = None
-    yahoo_redirect_uri: Optional[str] = None
+    yahoo_client_id: str | None = None
+    yahoo_client_secret: str | None = None
+    yahoo_redirect_uri: str | None = None
 
     # Feature flags
     feature_weather: bool = False

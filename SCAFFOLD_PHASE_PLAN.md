@@ -184,4 +184,8 @@
 
 ---
 
+## 6. Completion Log
+- [x] Phase 1 — Infra bootstrap: Repository layout, shared tooling, `.env` template updates, and CI workflow (`.github/workflows/ci.yml`).
+- [x] Phase 2 — Backend skeleton: FastAPI routers (`/me/leagues`, `/leagues/{league_key}/roster`, `/games/live`, `/games/{event_id}/pbp`), Pydantic schemas, SQLAlchemy models, Alembic environment with initial migration, and contract tests validating OpenAPI output.
+
 Prepared by: **Lead Architect Agent**

@@ -1,5 +1,5 @@
 """REST API routers available in the application."""
 
-from app.api.routes import health
+from app.api.routes import games, health, leagues, me
 
-__all__ = ["health"]
+__all__ = ["games", "health", "leagues", "me"]
