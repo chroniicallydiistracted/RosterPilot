@@ -23,7 +23,7 @@ source "$VENV/bin/activate"
 
 # upgrade pip + tooling and install poetry into the venv
 python -m pip install --upgrade pip setuptools wheel
-python -m pip install "poetry==1.6.1"
+python -m pip install "poetry==1.8.3"
 
 # load repo env into the shell
 if [ ! -f "$REPO/.env" ]; then
@@ -47,18 +47,19 @@ done
 # Backend: install deps into the active venv, run migrations and tests
 cd "$REPO/backend"
 export POETRY_VIRTUALENVS_CREATE=false
-poetry install --no-interaction --no-ansi
+poetry install --with dev --sync --no-interaction --no-ansi
+poetry run rp-env-check
 poetry run alembic upgrade head
 poetry run pytest -q
 
 # Frontend: install deps and start dev server
 cd "$REPO/frontend"
+if [ ! -f .env.local ] && [ -f .env.example ]; then
+  cp .env.example .env.local
+fi
 npm ci
-cp .env.production .env.local || true
 npm run dev
 
 # Optional root-level scripts (no-op if not needed)
 cd "$REPO"
-npm install || true
-
 echo "Bootstrap complete."

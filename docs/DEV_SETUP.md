@@ -7,8 +7,8 @@ development environment.
 ## 1. Prerequisites
 
 - Python 3.11+
-- Node.js 20+
-- Poetry (`pip install poetry`)
+- Node.js 20+ (with npm 10+)
+- Poetry 1.8 (`pip install "poetry==1.8.3"`)
 - Docker Desktop (optional but recommended for parity with Cloud Run)
 
 ## 2. Environment Variables
@@ -17,7 +17,7 @@ Consult `ENVIRONMENT_VARIABLES.md` for the full catalog. At minimum,
 create the following files from the provided templates:
 
 - `cp backend/.env.example backend/.env`
-- `cp frontend/.env.production.example frontend/.env.local`
+- `cp frontend/.env.example frontend/.env.local`
 
 Populate the secrets using the values issued by Yahoo, Neon, and
 Upstash. Never commit filled `.env` files.
@@ -26,23 +26,25 @@ Upstash. Never commit filled `.env` files.
 
 ```bash
 cd backend
-poetry install
+poetry install --with dev --sync
+poetry run rp-env-check  # optional sanity check
 poetry run uvicorn app.main:app --reload
 ```
 
-This boots the FastAPI app with hot reload. Uvicorn will read the env
-values from `backend/.env` when running locally.
+This boots the FastAPI app with hot reload using the pinned dependency
+set from `poetry.lock`. The optional `rp-env-check` command validates the
+environment variables via the `Settings` schema.
 
 ## 4. Frontend Setup
 
 ```bash
-cd frontend
 npm install
-npm run dev
+npm run dev --workspace frontend
 ```
 
-The Next.js dev server proxies API requests to the backend via
-`NEXT_PUBLIC_API_URL`. Adjust the value in `.env.local` if needed.
+The workspace-aware install keeps a single `package-lock.json` at the
+repo root. Update `frontend/.env.local` if the backend runs on a
+different host.
 
 ## 5. Database and Redis
 

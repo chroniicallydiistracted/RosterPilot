@@ -3,6 +3,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import type { Route } from "next";
 import { ReactNode, useMemo } from "react";
 
 import { useLeagueContext, useEnv } from "@/components/providers/AppProviders";
@@ -12,7 +13,7 @@ interface AppShellProps {
   children: ReactNode;
 }
 
-const NAV_ITEMS = [
+const NAV_ITEMS: Array<{ href: Route; label: string }> = [
   { href: "/dashboard", label: "Dashboard" },
   { href: "/optimizer", label: "Optimizer" },
   { href: "/waivers", label: "Waivers" },

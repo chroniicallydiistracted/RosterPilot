@@ -153,7 +153,7 @@ OTEL_EXPORTER_OTLP_HEADERS=
 SENTRY_DSN=
 ```
 
-**frontend/.env.production.example**
+**frontend/.env.example**
 ```
 NEXT_PUBLIC_API_URL=https://api.westfam.media
 NEXT_PUBLIC_WS_URL=wss://api.westfam.media/ws

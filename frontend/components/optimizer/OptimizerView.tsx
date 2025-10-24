@@ -17,13 +17,14 @@ export function OptimizerView() {
   const [lockedPlayers, setLockedPlayers] = useState<Record<string, boolean>>({});
 
   const suggestions: LineupSuggestion[] = useMemo(() => (data ? buildLineupSuggestions(data) : []), [data]);
+  const optimizer = data?.optimizer ?? null;
 
   const recommendedSet = useMemo(() => {
-    if (!data) {
+    if (!data?.optimizer?.recommended_starters?.length) {
       return new Set<string>();
     }
     return new Set(data.optimizer.recommended_starters.map((name) => name.toLowerCase()));
-  }, [data]);
+  }, [data?.optimizer?.recommended_starters]);
 
   const recommendedLineup = useMemo(() => {
     if (!data) {
@@ -72,8 +73,12 @@ export function OptimizerView() {
           </div>
         </div>
         <p className={styles.description}>
-          Switching to the recommended lineup yields <strong>+{data.optimizer.delta_points.toFixed(1)} points</strong> based on
-          current Yahoo projections. Lock any players you want to keep anchored before requesting a recompute.
+          {optimizer ? (
+            <>Switching to the recommended lineup yields <strong>+{(optimizer.delta_points ?? 0).toFixed(1)} points</strong> based on
+            current Yahoo projections. Lock any players you want to keep anchored before requesting a recompute.</>
+          ) : (
+            "Optimizer results are not available yet. Keep playing games to unlock solver insights."
+          )}
         </p>
         {suggestions.length === 0 ? (
           <p className={styles.emptyCopy}>Your current starters already align with the optimizer’s recommendation.</p>

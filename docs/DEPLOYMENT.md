@@ -49,9 +49,9 @@ Store backend secrets in **GCP Secret Manager** and mount as env vars at deploy 
 
 ### Pages configuration
 - Create a new Pages project → connect GitHub repo.
-- **Build command:** one of  
-  - `npm ci && npm run build` (regular static SSG)  
-  - `npm ci && npm run build && npm run export` (if using `next export`)
+- **Build command:** one of
+  - `npm ci && npm run build --workspace frontend` (regular static SSG)
+  - `npm ci && npm run build --workspace frontend && npm run export --workspace frontend` (if using `next export`)
 - **Build output directory:** `.next` (SSG) or `out` (export)
 - **Environment variables (Production):** `NEXT_PUBLIC_API_URL`, `NEXT_PUBLIC_WS_URL`
 - **Custom domain:** map `app.rosterpilot.com` to the Pages project.
@@ -68,22 +68,38 @@ Store backend secrets in **GCP Secret Manager** and mount as env vars at deploy 
 ### Minimal Dockerfile
 ```dockerfile
 # backend/Dockerfile
-FROM python:3.11-slim
+# syntax=docker/dockerfile:1.6
+
+FROM python:3.11-slim AS builder
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    PIP_NO_CACHE_DIR=1
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    POETRY_VERSION=1.8.3 \
+    POETRY_NO_INTERACTION=1
 
 WORKDIR /app
-COPY backend/pyproject.toml backend/poetry.lock* /app/
-RUN pip install --upgrade pip && \
-    pip install --no-cache-dir poetry && \
-    poetry config virtualenvs.create false && \
-    poetry install --only main
+RUN pip install --no-cache-dir "poetry==${POETRY_VERSION}"
+COPY pyproject.toml poetry.lock ./
+RUN poetry export --without-hashes --format=requirements.txt --output requirements.txt --only main
 
-COPY backend/ /app/
+FROM python:3.11-slim AS runtime
 
-# Cloud Run injects PORT
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PYTHONFAULTHANDLER=1
+
+WORKDIR /app
+COPY --from=builder /app/requirements.txt ./
+RUN python -m pip install --no-cache-dir "pip==24.2" \
+    && pip install --no-cache-dir -r requirements.txt \
+    && rm -f requirements.txt
+
+COPY . /app
+
 ENV PORT=8080
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080", "--proxy-headers"]
 ```

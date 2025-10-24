@@ -111,20 +111,22 @@ export function DashboardView() {
         <RosterTable title="Bench" slots={bench} source="yahoo" />
       </div>
 
-      <section className={styles.card} aria-label="Optimizer insights">
-        <div className={styles.cardHeader}>
-          <h2 className={styles.cardTitle}>Optimizer highlights</h2>
-          <ProvenanceBadge source="optimizer" />
-        </div>
-        <p className={styles.cardDescription}>
-          Recommended lineup projects {optimizer.delta_points.toFixed(1)} more points than the current starters.
-        </p>
-        <ul className={styles.optimizerDetails}>
-          {optimizer.rationale.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </section>
+      {optimizer ? (
+        <section className={styles.card} aria-label="Optimizer insights">
+          <div className={styles.cardHeader}>
+            <h2 className={styles.cardTitle}>Optimizer highlights</h2>
+            <ProvenanceBadge source="optimizer" />
+          </div>
+          <p className={styles.cardDescription}>
+            Recommended lineup projects {optimizer.delta_points?.toFixed(1) ?? "0.0"} more points than the current starters.
+          </p>
+          <ul className={styles.optimizerDetails}>
+            {optimizer.rationale.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
     </div>
   );
 }
