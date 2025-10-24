@@ -82,7 +82,7 @@ ipython_config.py
 
 # pyenv
 .python-version
-
+pyespn-source-code/
 # celery beat schedule file
 celerybeat-schedule
 
