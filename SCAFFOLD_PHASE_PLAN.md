@@ -210,5 +210,8 @@
 - [x] Environment parity — Added checked-in environment templates (`backend/.env.example`, `frontend/.env.production.example`), strengthened configuration validation for required secrets, and introduced unit tests covering settings parsing.
 - [x] Phase 3 — Yahoo Auth + Read Model: OAuth authorize/callback endpoints with encrypted token storage, Yahoo ingestion service seeding leagues/teams/rosters from fixtures, persistence migrations, and contract/integration tests covering the authenticated flow.
 - [x] Phase 4 — PyESPN ingestion: HTTP client wrapper, scoreboard/play-by-play ingestion into Postgres, expanded schema/migration for event states, database-backed `/games` APIs, deterministic fixtures, and unit/contract tests covering the live games and play-by-play surfaces.
+- [x] Phase 5 — Database schema hardening & migrations: Added canonical player mapping enhancements, ESPN athlete table,
+  reference data seed jobs for teams/venues, curated canonical player dataset, and unit tests guarding id-map integrity
+  alongside schema migration `20251023_0004_canonical_mapping_seed`.
 
 Prepared by: **Lead Architect Agent**

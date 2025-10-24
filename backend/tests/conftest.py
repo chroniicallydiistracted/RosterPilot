@@ -26,6 +26,7 @@ from sqlalchemy.orm import Session, sessionmaker
 from app.core.config import get_settings
 from app.dependencies import provide_db_session
 from app.db.session import _engine
+from app.jobs.reference import seed_canonical_players, seed_reference_data
 from app.main import create_app  # noqa: E402
 from app.models import Base
 from app.security.crypto import TokenCipher
@@ -52,6 +53,10 @@ def _initialize_database() -> Iterator[None]:
     Base.metadata.create_all(engine)
 
     with Session(engine) as session:
+        seed_reference_data(session)
+        seed_canonical_players(session)
+        session.commit()
+
         cipher = TokenCipher.from_settings(settings)
         ingestion = YahooIngestionService(session=session, cipher=cipher)
         bundle = load_test_user_bundle()
