@@ -117,3 +117,11 @@ def get_settings() -> Settings:
     """Return a cached Settings instance for dependency injection."""
 
     return Settings()
+
+
+if __name__ == "__main__":  # pragma: no cover - convenience for local validation
+    try:
+        get_settings()
+    except Exception as exc:  # noqa: BLE001 - surface original exception context
+        raise SystemExit(f"Environment validation failed: {exc}") from exc
+    print("Environment configuration looks good.")

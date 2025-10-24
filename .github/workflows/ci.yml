@@ -12,19 +12,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'poetry'
       - name: Install Poetry
-        run: pip install poetry==1.6.1
+        run: pipx install poetry==1.8.3
       - name: Install dependencies
         working-directory: backend
-        run: poetry install
+        run: |
+          poetry config virtualenvs.in-project true
+          poetry install --with dev --sync --no-interaction --no-ansi
+      - name: Validate environment config
+        working-directory: backend
+        run: poetry run rp-env-check
       - name: Lint backend
         working-directory: backend
         run: |
           poetry run ruff check app tests
-          poetry run mypy app
+          poetry run mypy --config-file ../mypy.ini app
       - name: Backend tests
         working-directory: backend
         run: poetry run pytest
@@ -38,12 +44,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
       - name: Install dependencies
-        working-directory: frontend
-        run: npm install
+        run: npm ci
       - name: Lint frontend
-        working-directory: frontend
-        run: npm run lint
+        run: npm run lint --workspace frontend
 
   security:
     name: Security scans
@@ -55,19 +61,22 @@ jobs:
         with:
           args: "--source=. --no-banner"
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Backend dependency audit
+        working-directory: backend
         run: |
-          pip install pip-audit==2.7.3
-          pip-audit -r backend/poetry.lock
+          pipx install poetry==1.8.3
+          poetry export --with dev --format=requirements.txt --output ../backend-requirements.txt
+          pipx run --spec pip-audit==2.7.3 pip-audit -r ../backend-requirements.txt
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
       - name: Frontend dependency audit
-        working-directory: frontend
         run: |
-          npm install --ignore-scripts
+          npm ci --ignore-scripts
           npm audit --omit=dev --audit-level=high

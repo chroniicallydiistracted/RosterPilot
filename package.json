@@ -5,14 +5,14 @@
   "description": "Advisory companion for Yahoo Fantasy Football. Read-only Yahoo scopes. Official NFL game data from PyESPN.",
   "scripts": {
     "dev": "echo 'Starting frontend and backend... (run in separate terminals)'",
-    "dev:frontend": "cd frontend && npm install && npm run dev",
-    "dev:backend": "cd backend && poetry install && poetry run uvicorn app.main:app --reload",
-    "build:frontend": "cd frontend && npm install && npm run build",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev:backend": "cd backend && poetry install --sync --with dev && poetry run uvicorn app.main:app --reload",
+    "build:frontend": "npm run build --workspace frontend",
     "lint": "npm run lint:frontend && npm run lint:backend",
-    "lint:frontend": "cd frontend && npm run lint",
+    "lint:frontend": "npm run lint --workspace frontend",
     "lint:backend": "cd backend && poetry run ruff check app tests && poetry run mypy --config-file ../mypy.ini app",
     "test": "npm run test:frontend && npm run test:backend",
-    "test:frontend": "cd frontend && npm run test",
+    "test:frontend": "npm run test --workspace frontend",
     "test:backend": "cd backend && poetry run pytest",
     "deploy:backend": "gcloud builds submit backend --tag gcr.io/$GOOGLE_CLOUD_PROJECT/rosterpilot-api:$(git rev-parse --short HEAD) && gcloud run deploy rosterpilot-api --image gcr.io/$GOOGLE_CLOUD_PROJECT/rosterpilot-api:$(git rev-parse --short HEAD) --platform managed --region us-central1 --allow-unauthenticated --port 8080 --concurrency 80 --cpu 1 --memory 512Mi --timeout 3600 --min-instances 0 --max-instances 2 --set-secrets=DATABASE_URL=RP_DATABASE_URL:latest,REDIS_URL=RP_REDIS_URL:latest,YAHOO_CLIENT_ID=RP_YH_ID:latest,YAHOO_CLIENT_SECRET=RP_YH_SECRET:latest,YAHOO_REDIRECT_URI=RP_YH_REDIRECT:latest",
     "deploy:frontend": "echo 'Frontend is deployed via Cloudflare Pages, usually automatically from a git push. See DEPLOYMENT.md for details.'",
@@ -20,5 +20,10 @@
   },
   "workspaces": [
     "frontend"
-  ]
+  ],
+  "engines": {
+    "node": ">=20.11.1 <21",
+    "npm": ">=10.5.0 <12"
+  },
+  "packageManager": "npm@11.4.2"
 }

@@ -119,12 +119,12 @@ Next.js Frontend --> PixiJS Field Renderer + React UI --> User Interactions
    - `DATABASE_URL`, `REDIS_URL`
    - Optional feature flags: `ENABLE_WEATHER=false`, `OPTIMIZER_SEED`
 3. **Setup:**
-   - Install Python dependencies (`pip install -r backend/requirements.txt`) and Node dependencies (`npm install`).
-   - Run database migrations (`alembic upgrade head`).
-   - Seed fixtures for local testing (`python backend/scripts/load_fixtures.py`).
+   - Install backend dependencies with Poetry (`cd backend && poetry install --with dev --sync`).
+   - Validate env configuration (`poetry run rp-env-check`) and run migrations (`poetry run alembic upgrade head`).
+   - Install frontend dependencies from the repo root (`npm install`) to hydrate the workspace lockfile.
 4. **Run Services:**
-   - Start backend (`uvicorn backend.main:app --reload`).
-   - Start frontend (`npm run dev` in `frontend/`).
+   - Start backend (`cd backend && poetry run uvicorn app.main:app --reload`).
+   - Start frontend (`npm run dev --workspace frontend`).
    - Optional: launch websocket replay using fixtures for Game Center smoke testing.
 5. **Quality Gates:**
    - `ruff`, `mypy`, `pytest`, contract tests against recorded Yahoo/PyESPN fixtures.

@@ -31,14 +31,13 @@ scope and PyESPN provenance rules.
 ## Running Locally
 
 ```bash
-cd frontend
 npm install
-npm run dev
+npm run dev --workspace frontend
 ```
 
 Ensure the backend is running (or fixtures are available) so `/api/meta/config`
 and core endpoints respond. Environment variables are read from
-`.env.local` (see `frontend/.env.production.example`).
+`.env.local`; copy `frontend/.env.example` to bootstrap defaults.
 
 ## Test & Lint
 
