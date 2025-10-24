@@ -1,0 +1,5264 @@
+{
+  "header": {
+    "id": "401437933",
+    "competitions": [
+      {
+        "id": "401437933",
+        "competitors": [
+          {
+            "uid": "s:20~l:28~t:1",
+            "homeAway": "home",
+            "score": "20",
+            "winner": true,
+            "record": [
+              {
+                "summary": "6-10",
+                "displayValue": "6-10",
+                "type": "total"
+              },
+              {
+                "summary": "5-3",
+                "displayValue": "5-3",
+                "type": "home"
+              }
+            ],
+            "possession": false,
+            "id": "1",
+            "team": {
+              "uid": "s:20~l:28~t:1",
+              "alternateColor": "000000",
+              "color": "000000",
+              "displayName": "Atlanta Falcons",
+              "name": "Falcons",
+              "nickname": "Falcons",
+              "guid": "49fd392a-86fe-4df3-1b77-9bbfa18b2ad5",
+              "location": "Atlanta",
+              "links": [
+                {
+                  "rel": [
+                    "clubhouse",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/nfl/team/_/name/atl/atlanta-falcons",
+                  "text": "Clubhouse"
+                }
+              ],
+              "id": "1",
+              "abbreviation": "ATL",
+              "logos": [
+                {
+                  "lastUpdated": "2024-06-25T18:44Z",
+                  "width": 500,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "default"
+                  ],
+                  "href": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+                  "height": 500
+                },
+                {
+                  "lastUpdated": "2024-06-25T18:44Z",
+                  "width": 500,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "dark"
+                  ],
+                  "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/atl.png",
+                  "height": 500
+                },
+                {
+                  "lastUpdated": "2024-06-25T18:44Z",
+                  "width": 500,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "scoreboard"
+                  ],
+                  "href": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png",
+                  "height": 500
+                },
+                {
+                  "lastUpdated": "2024-06-25T18:44Z",
+                  "width": 500,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "scoreboard",
+                    "dark"
+                  ],
+                  "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/scoreboard/atl.png",
+                  "height": 500
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:49Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "primary_logo_on_white_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/49fd392a-86fe-4df3-1b77-9bbfa18b2ad5/logos/primary_logo_on_white_color.png",
+                  "height": 4096
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:49Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "primary_logo_on_black_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/49fd392a-86fe-4df3-1b77-9bbfa18b2ad5/logos/primary_logo_on_black_color.png",
+                  "height": 4096
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:49Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "primary_logo_on_primary_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/49fd392a-86fe-4df3-1b77-9bbfa18b2ad5/logos/primary_logo_on_primary_color.png",
+                  "height": 4096
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:49Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "primary_logo_on_secondary_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/49fd392a-86fe-4df3-1b77-9bbfa18b2ad5/logos/primary_logo_on_secondary_color.png",
+                  "height": 4096
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:49Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "secondary_logo_on_white_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/49fd392a-86fe-4df3-1b77-9bbfa18b2ad5/logos/secondary_logo_on_white_color.png",
+                  "height": 4096
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:49Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "secondary_logo_on_black_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/49fd392a-86fe-4df3-1b77-9bbfa18b2ad5/logos/secondary_logo_on_black_color.png",
+                  "height": 4096
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:49Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "secondary_logo_on_primary_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/49fd392a-86fe-4df3-1b77-9bbfa18b2ad5/logos/secondary_logo_on_primary_color.png",
+                  "height": 4096
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:49Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "secondary_logo_on_secondary_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/49fd392a-86fe-4df3-1b77-9bbfa18b2ad5/logos/secondary_logo_on_secondary_color.png",
+                  "height": 4096
+                }
+              ]
+            },
+            "linescores": [
+              {
+                "displayValue": "0"
+              },
+              {
+                "displayValue": "14"
+              },
+              {
+                "displayValue": "0"
+              },
+              {
+                "displayValue": "6"
+              }
+            ],
+            "order": 0
+          },
+          {
+            "uid": "s:20~l:28~t:22",
+            "homeAway": "away",
+            "score": "19",
+            "winner": false,
+            "record": [
+              {
+                "summary": "4-12",
+                "displayValue": "4-12",
+                "type": "total"
+              },
+              {
+                "summary": "3-4",
+                "displayValue": "3-4",
+                "type": "road"
+              }
+            ],
+            "possession": false,
+            "id": "22",
+            "team": {
+              "uid": "s:20~l:28~t:22",
+              "alternateColor": "ffffff",
+              "color": "A40227",
+              "displayName": "Arizona Cardinals",
+              "name": "Cardinals",
+              "nickname": "Cardinals",
+              "guid": "8fc7b962-95e1-3cb8-6a7d-b499de9ad546",
+              "location": "Arizona",
+              "links": [
+                {
+                  "rel": [
+                    "clubhouse",
+                    "desktop",
+                    "team"
+                  ],
+                  "href": "https://www.espn.com/nfl/team/_/name/ari/arizona-cardinals",
+                  "text": "Clubhouse"
+                }
+              ],
+              "id": "22",
+              "abbreviation": "ARI",
+              "logos": [
+                {
+                  "lastUpdated": "2024-06-25T18:43Z",
+                  "width": 500,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "default"
+                  ],
+                  "href": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+                  "height": 500
+                },
+                {
+                  "lastUpdated": "2024-06-25T18:43Z",
+                  "width": 500,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "dark"
+                  ],
+                  "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/ari.png",
+                  "height": 500
+                },
+                {
+                  "lastUpdated": "2024-06-25T18:44Z",
+                  "width": 500,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "scoreboard"
+                  ],
+                  "href": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ari.png",
+                  "height": 500
+                },
+                {
+                  "lastUpdated": "2024-06-25T18:43Z",
+                  "width": 500,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "scoreboard",
+                    "dark"
+                  ],
+                  "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/scoreboard/ari.png",
+                  "height": 500
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:48Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "primary_logo_on_white_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/8fc7b962-95e1-3cb8-6a7d-b499de9ad546/logos/primary_logo_on_white_color.png",
+                  "height": 4096
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:48Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "primary_logo_on_black_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/8fc7b962-95e1-3cb8-6a7d-b499de9ad546/logos/primary_logo_on_black_color.png",
+                  "height": 4096
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:48Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "primary_logo_on_primary_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/8fc7b962-95e1-3cb8-6a7d-b499de9ad546/logos/primary_logo_on_primary_color.png",
+                  "height": 4096
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:48Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "primary_logo_on_secondary_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/8fc7b962-95e1-3cb8-6a7d-b499de9ad546/logos/primary_logo_on_secondary_color.png",
+                  "height": 4096
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:48Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "secondary_logo_on_white_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/8fc7b962-95e1-3cb8-6a7d-b499de9ad546/logos/secondary_logo_on_white_color.png",
+                  "height": 4096
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:48Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "secondary_logo_on_black_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/8fc7b962-95e1-3cb8-6a7d-b499de9ad546/logos/secondary_logo_on_black_color.png",
+                  "height": 4096
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:48Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "secondary_logo_on_primary_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/8fc7b962-95e1-3cb8-6a7d-b499de9ad546/logos/secondary_logo_on_primary_color.png",
+                  "height": 4096
+                },
+                {
+                  "lastUpdated": "2024-12-03T20:48Z",
+                  "width": 4096,
+                  "alt": "",
+                  "rel": [
+                    "full",
+                    "secondary_logo_on_secondary_color"
+                  ],
+                  "href": "https://a.espncdn.com/guid/8fc7b962-95e1-3cb8-6a7d-b499de9ad546/logos/secondary_logo_on_secondary_color.png",
+                  "height": 4096
+                }
+              ]
+            },
+            "linescores": [
+              {
+                "displayValue": "3"
+              },
+              {
+                "displayValue": "10"
+              },
+              {
+                "displayValue": "3"
+              },
+              {
+                "displayValue": "3"
+              }
+            ],
+            "order": 1
+          }
+        ]
+      }
+    ]
+  },
+  "drives": {
+    "previous": [
+      {
+        "id": "4014379331",
+        "team": {
+          "id": "22",
+          "displayName": "Arizona Cardinals",
+          "abbreviation": "ARI",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/ari.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "15:00"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "8:24"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "FG",
+        "displayResult": "Field Goal",
+        "plays": [
+          {
+            "id": "40143793342",
+            "sequenceNumber": "4200",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "15:00"
+            },
+            "type": {
+              "text": "Kickoff",
+              "abbreviation": "K"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 0,
+              "distance": 0,
+              "yardsToEndzone": 65
+            },
+            "text": "B.Pinion kicks 65 yards from ATL 35 to end zone, Touchback.",
+            "scoringPlay": false
+          },
+          {
+            "id": "40143793357",
+            "sequenceNumber": "5700",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "15:00"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 3,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 75
+            },
+            "text": "(15:00) (Shotgun) D.Blough pass short middle to G.Dortch to ARZ 28 for 3 yards (R.Evans).",
+            "scoringPlay": false
+          },
+          {
+            "id": "40143793381",
+            "sequenceNumber": "8100",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "14:32"
+            },
+            "type": {
+              "text": "Sack",
+              "abbreviation": null
+            },
+            "statYardage": -7,
+            "start": {
+              "down": 2,
+              "distance": 7,
+              "yardsToEndzone": 72
+            },
+            "text": "(14:32) (No Huddle, Shotgun) D.Blough sacked at ARZ 21 for -7 yards (I.Oliver).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933100",
+            "sequenceNumber": "10000",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "13:47"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 17,
+            "start": {
+              "down": 3,
+              "distance": 14,
+              "yardsToEndzone": 79
+            },
+            "text": "(13:47) (Shotgun) D.Blough pass deep right to M.Brown to ARZ 38 for 17 yards (D.Alford).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933124",
+            "sequenceNumber": "12400",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "13:26"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 2,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 62
+            },
+            "text": "(13:26) (No Huddle, Shotgun) Direct snap to J.Conner.  J.Conner right guard to ARZ 40 for 2 yards (R.Evans, A.Anderson).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933145",
+            "sequenceNumber": "14500",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "12:51"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 16,
+            "start": {
+              "down": 2,
+              "distance": 8,
+              "yardsToEndzone": 60
+            },
+            "text": "(12:51) (No Huddle) D.Blough pass short middle to T.McBride to ATL 44 for 16 yards (R.Grant).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933171",
+            "sequenceNumber": "17100",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "12:17"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 1,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 44
+            },
+            "text": "(12:17) (No Huddle) J.Conner left guard to ATL 43 for 1 yard (A.Anderson, J.Hawkins).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933192",
+            "sequenceNumber": "19200",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "11:35"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 8,
+            "start": {
+              "down": 2,
+              "distance": 9,
+              "yardsToEndzone": 43
+            },
+            "text": "(11:35) (Shotgun) D.Blough pass short left to T.McBride to ATL 35 for 8 yards (T.Andersen).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933216",
+            "sequenceNumber": "21600",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "11:11"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 4,
+            "start": {
+              "down": 3,
+              "distance": 1,
+              "yardsToEndzone": 35
+            },
+            "text": "(11:14) (No Huddle, Shotgun) J.Conner left tackle to ATL 31 for 4 yards (J.Hawkins; T.Andersen).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933237",
+            "sequenceNumber": "23700",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "10:40"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 7,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 31
+            },
+            "text": "(10:43) (No Huddle) J.Conner right guard to ATL 24 for 7 yards (R.Grant; I.Oliver).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933258",
+            "sequenceNumber": "25800",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "10:05"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 2,
+              "distance": 3,
+              "yardsToEndzone": 24
+            },
+            "text": "(10:05) J.Conner right tackle to ATL 19 for 5 yards (T.Andersen, R.Grant).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933279",
+            "sequenceNumber": "27900",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "9:44"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 9,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 19
+            },
+            "text": "(9:44) (No Huddle, Shotgun) D.Blough pass short right to M.Brown pushed ob at ATL 10 for 9 yards (C.Armstrong).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933308",
+            "sequenceNumber": "30800",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "9:09"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": -10,
+            "start": {
+              "down": 2,
+              "distance": 1,
+              "yardsToEndzone": 10
+            },
+            "text": "(9:09) (No Huddle) J.Conner left end ran ob at ATL 3 for 7 yards (A.Terrell). PENALTY on ARZ-J.Jones, Offensive Holding, 10 yards, enforced at ATL 10 - No Play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933345",
+            "sequenceNumber": "34500",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "8:37"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 2,
+              "distance": 11,
+              "yardsToEndzone": 72
+            },
+            "text": "(8:37) (Shotgun) D.Blough pass incomplete deep left to G.Dortch.",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933367",
+            "sequenceNumber": "36700",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "8:32"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 3,
+              "distance": 11,
+              "yardsToEndzone": 72
+            },
+            "text": "(8:32) (Shotgun) D.Blough pass incomplete short left to G.Dortch (D.Alford).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933389",
+            "sequenceNumber": "38900",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "8:24"
+            },
+            "type": {
+              "text": "Field Goal Good",
+              "abbreviation": "FG"
+            },
+            "statYardage": 38,
+            "start": {
+              "down": 4,
+              "distance": 11,
+              "yardsToEndzone": 20
+            },
+            "text": "(8:28) M.Prater 38 yard field goal is GOOD, Center-H.Bradley, Holder-A.Lee.",
+            "scoringPlay": true
+          }
+        ]
+      },
+      {
+        "id": "4014379332",
+        "team": {
+          "id": "1",
+          "displayName": "Atlanta Falcons",
+          "abbreviation": "ATL",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/atl.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "8:24"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "13:38"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "TD",
+        "displayResult": "Touchdown",
+        "plays": [
+          {
+            "id": "401437933408",
+            "sequenceNumber": "40800",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "8:24"
+            },
+            "type": {
+              "text": "Kickoff",
+              "abbreviation": "K"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 0,
+              "distance": 0,
+              "yardsToEndzone": 65
+            },
+            "text": "M.Prater kicks 65 yards from ARZ 35 to end zone, Touchback.",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933423",
+            "sequenceNumber": "42300",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "8:24"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 3,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 75
+            },
+            "text": "(8:24) (Shotgun) D.Ridder pass short right to C.Patterson to ATL 28 for 3 yards (D.Gardeck).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933452",
+            "sequenceNumber": "45200",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "7:43"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 3,
+            "start": {
+              "down": 2,
+              "distance": 7,
+              "yardsToEndzone": 72
+            },
+            "text": "(7:43) (Shotgun) C.Patterson left tackle to ATL 31 for 3 yards (D.Gardeck).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933473",
+            "sequenceNumber": "47300",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "7:05"
+            },
+            "type": {
+              "text": "Penalty",
+              "abbreviation": "PEN"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 3,
+              "distance": 4,
+              "yardsToEndzone": 69
+            },
+            "text": "(7:05) (Shotgun) PENALTY on ARZ-J.Watt, Neutral Zone Infraction, 5 yards, enforced at ATL 31 - No Play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933501",
+            "sequenceNumber": "50100",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "6:47"
+            },
+            "type": {
+              "text": "Penalty",
+              "abbreviation": "PEN"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 64
+            },
+            "text": "(6:47) (Shotgun) PENALTY on ARZ-L.Fotu, Encroachment, 5 yards, enforced at ATL 36 - No Play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933524",
+            "sequenceNumber": "52400",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "6:34"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": -1,
+            "start": {
+              "down": 1,
+              "distance": 5,
+              "yardsToEndzone": 59
+            },
+            "text": "(6:34) T.Allgeier left end to ATL 40 for -1 yards (J.Ledbetter, C.Thomas).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933545",
+            "sequenceNumber": "54500",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "5:58"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 2,
+              "distance": 6,
+              "yardsToEndzone": 60
+            },
+            "text": "(5:58) (Shotgun) D.Ridder pass short left to K.Hodge to ATL 45 for 5 yards (J.Whittaker).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933569",
+            "sequenceNumber": "56900",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "5:22"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 3,
+              "distance": 1,
+              "yardsToEndzone": 55
+            },
+            "text": "(5:22) (Shotgun) T.Allgeier left guard to 50 for 5 yards (J.Ledbetter; J.Thompson).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933590",
+            "sequenceNumber": "59000",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "4:39"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 50
+            },
+            "text": "(4:39) (Shotgun) D.Ridder pass short right to M.Pruitt to ARZ 45 for 5 yards (Z.Collins, E.Turner).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933614",
+            "sequenceNumber": "61400",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "3:56"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 2,
+              "distance": 5,
+              "yardsToEndzone": 45
+            },
+            "text": "(3:56) (Shotgun) D.Ridder scrambles left tackle to ARZ 40 for 5 yards (Z.Collins).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933635",
+            "sequenceNumber": "63500",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "3:12"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": -8,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 40
+            },
+            "text": "(3:12) (Shotgun) T.Allgeier right end ran ob at ARZ 3 for 37 yards (I.Simmons). PENALTY on ATL-C.Lindstrom, Offensive Holding, 10 yards, enforced at ARZ 38.",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933672",
+            "sequenceNumber": "67200",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "2:50"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": -5,
+            "start": {
+              "down": 1,
+              "distance": 18,
+              "yardsToEndzone": 48
+            },
+            "text": "(2:50) D.Ridder pass short left to C.Patterson to ATL 47 for -5 yards (E.Turner).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933696",
+            "sequenceNumber": "69600",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "2:10"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 16,
+            "start": {
+              "down": 2,
+              "distance": 23,
+              "yardsToEndzone": 53
+            },
+            "text": "(2:15) D.Ridder pass short right to C.Patterson to ARZ 37 for 16 yards (J.Thompson).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933720",
+            "sequenceNumber": "72000",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "1:33"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 9,
+            "start": {
+              "down": 3,
+              "distance": 7,
+              "yardsToEndzone": 37
+            },
+            "text": "(1:33) (Shotgun) T.Allgeier right end to ARZ 28 for 9 yards (Z.Collins; C.Thomas).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933748",
+            "sequenceNumber": "74800",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "0:47"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 48
+            },
+            "text": "(:47) (Shotgun) D.Ridder pass incomplete short middle to D.London [J.Ledbetter].",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933770",
+            "sequenceNumber": "77000",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "0:43"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 2,
+              "distance": 10,
+              "yardsToEndzone": 28
+            },
+            "text": "(:43) (Shotgun) T.Allgeier right end to ARZ 23 for 5 yards (C.Thomas).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933791",
+            "sequenceNumber": "79100",
+            "period": {
+              "number": 1
+            },
+            "clock": {
+              "displayValue": "0:00"
+            },
+            "type": {
+              "text": "End Period",
+              "abbreviation": "EP"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 3,
+              "distance": 0,
+              "yardsToEndzone": 23
+            },
+            "text": "END QUARTER 1",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933810",
+            "sequenceNumber": "81000",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "15:00"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 4,
+            "start": {
+              "down": 3,
+              "distance": 5,
+              "yardsToEndzone": 23
+            },
+            "text": "(15:00) (Shotgun) D.Ridder pass short right to D.London to ARZ 19 for 4 yards (C.Matthew; J.Thompson).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933834",
+            "sequenceNumber": "83400",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "14:21"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 14,
+            "start": {
+              "down": 4,
+              "distance": 1,
+              "yardsToEndzone": 19
+            },
+            "text": "(14:21) T.Allgeier left tackle to ARZ 5 for 14 yards (J.Thompson).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933855",
+            "sequenceNumber": "85500",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "13:38"
+            },
+            "type": {
+              "text": "Rushing Touchdown",
+              "abbreviation": "TD"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 1,
+              "distance": 5,
+              "yardsToEndzone": 5
+            },
+            "text": "Tyler Allgeier 5 Yd Rush Y.Koo extra point is GOOD, Center-L.McCullough, Holder-B.Pinion.",
+            "scoringPlay": true
+          }
+        ]
+      },
+      {
+        "id": "4014379333",
+        "team": {
+          "id": "22",
+          "displayName": "Arizona Cardinals",
+          "abbreviation": "ARI",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/ari.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "13:38"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "10:46"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "PUNT",
+        "displayResult": "Punt",
+        "plays": [
+          {
+            "id": "401437933898",
+            "sequenceNumber": "89800",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "13:38"
+            },
+            "type": {
+              "text": "Kickoff",
+              "abbreviation": "K"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 0,
+              "distance": 0,
+              "yardsToEndzone": 65
+            },
+            "text": "B.Pinion kicks 65 yards from ATL 35 to end zone, Touchback.",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933913",
+            "sequenceNumber": "91300",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "13:38"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 2,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 75
+            },
+            "text": "(13:38) (Shotgun) D.Blough pass short left to M.Brown pushed ob at ARZ 27 for 2 yards (A.Terrell; I.Oliver).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933942",
+            "sequenceNumber": "94200",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "13:11"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 13,
+            "start": {
+              "down": 2,
+              "distance": 8,
+              "yardsToEndzone": 73
+            },
+            "text": "(13:11) (No Huddle) D.Blough pass short left to R.Anderson to ARZ 40 for 13 yards (R.Evans).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933966",
+            "sequenceNumber": "96600",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "12:33"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 6,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 60
+            },
+            "text": "(12:33) (No Huddle, Shotgun) J.Conner left guard to ARZ 46 for 6 yards (D.Malone).",
+            "scoringPlay": false
+          },
+          {
+            "id": "401437933992",
+            "sequenceNumber": "99200",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "12:01"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 6,
+            "start": {
+              "down": 2,
+              "distance": 4,
+              "yardsToEndzone": 54
+            },
+            "text": "(12:01) (No Huddle, Shotgun) J.Conner left tackle to ATL 48 for 6 yards (D.Malone; J.Dalton).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331013",
+            "sequenceNumber": "101300",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "11:27"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 65
+            },
+            "text": "(11:33) (No Huddle, Shotgun) D.Blough pass incomplete short right.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331035",
+            "sequenceNumber": "103500",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "11:26"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 3,
+            "start": {
+              "down": 2,
+              "distance": 10,
+              "yardsToEndzone": 48
+            },
+            "text": "(11:26) (Shotgun) D.Blough scrambles up the middle to ATL 45 for 3 yards (G.Jarrett).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331056",
+            "sequenceNumber": "105600",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "10:58"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 3,
+              "distance": 7,
+              "yardsToEndzone": 89
+            },
+            "text": "(10:58) (No Huddle, Shotgun) D.Blough pass incomplete short right to C.Clement.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331078",
+            "sequenceNumber": "107800",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "10:53"
+            },
+            "type": {
+              "text": "Punt",
+              "abbreviation": "PUNT"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 4,
+              "distance": 7,
+              "yardsToEndzone": 45
+            },
+            "text": "(10:53) A.Lee punts 34 yards to ATL 11, Center-H.Bradley, fair catch by A.Williams.",
+            "scoringPlay": false
+          }
+        ]
+      },
+      {
+        "id": "4014379334",
+        "team": {
+          "id": "1",
+          "displayName": "Atlanta Falcons",
+          "abbreviation": "ATL",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/atl.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "10:46"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "10:36"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "FUMBLE",
+        "displayResult": "Fumble",
+        "plays": [
+          {
+            "id": "4014379331097",
+            "sequenceNumber": "109700",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "10:46"
+            },
+            "type": {
+              "text": "Fumble Recovery (Opponent)",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 89
+            },
+            "text": "(10:46) D.Ridder FUMBLES (Aborted) at ATL 11, touched at ATL 10, RECOVERED by ARZ-L.Fotu at ATL 8.",
+            "scoringPlay": false
+          }
+        ]
+      },
+      {
+        "id": "4014379335",
+        "team": {
+          "id": "22",
+          "displayName": "Arizona Cardinals",
+          "abbreviation": "ARI",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/ari.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "10:36"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "10:00"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "TD",
+        "displayResult": "Touchdown",
+        "plays": [
+          {
+            "id": "4014379331131",
+            "sequenceNumber": "113100",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "10:36"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 4,
+            "start": {
+              "down": 1,
+              "distance": 8,
+              "yardsToEndzone": 8
+            },
+            "text": "(10:36) J.Conner right guard to ATL 4 for 4 yards (A.Ogundeji; A.Anderson).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331152",
+            "sequenceNumber": "115200",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "10:00"
+            },
+            "type": {
+              "text": "Passing Touchdown",
+              "abbreviation": "TD"
+            },
+            "statYardage": 4,
+            "start": {
+              "down": 2,
+              "distance": 4,
+              "yardsToEndzone": 4
+            },
+            "text": "(10:06) (No Huddle) D.Blough pass short right to T.McBride for 4 yards, TOUCHDOWN.M.Prater extra point is GOOD, Center-H.Bradley, Holder-A.Lee.",
+            "scoringPlay": true
+          }
+        ]
+      },
+      {
+        "id": "4014379336",
+        "team": {
+          "id": "1",
+          "displayName": "Atlanta Falcons",
+          "abbreviation": "ATL",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/atl.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "10:00"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "2:54"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "DOWNS",
+        "displayResult": "Downs",
+        "plays": [
+          {
+            "id": "4014379331193",
+            "sequenceNumber": "119300",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "10:00"
+            },
+            "type": {
+              "text": "Kickoff",
+              "abbreviation": "K"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 0,
+              "distance": 0,
+              "yardsToEndzone": 65
+            },
+            "text": "M.Prater kicks 65 yards from ARZ 35 to end zone, Touchback.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331208",
+            "sequenceNumber": "120800",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "10:00"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 3,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 75
+            },
+            "text": "(10:00) (Shotgun) C.Patterson right tackle to ATL 28 for 3 yards (Z.Collins).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331229",
+            "sequenceNumber": "122900",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "9:22"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 8,
+            "start": {
+              "down": 2,
+              "distance": 7,
+              "yardsToEndzone": 72
+            },
+            "text": "(9:22) (Shotgun) D.Ridder pass short left to D.London ran ob at ATL 36 for 8 yards (I.Simmons).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331258",
+            "sequenceNumber": "125800",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "8:45"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": -1,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 64
+            },
+            "text": "(8:45) (Shotgun) C.Patterson left end to ATL 35 for -1 yards (D.Gardeck, I.Simmons).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331279",
+            "sequenceNumber": "127900",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "8:10"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 12,
+            "start": {
+              "down": 2,
+              "distance": 11,
+              "yardsToEndzone": 65
+            },
+            "text": "(8:10) D.Ridder pass short right to T.Allgeier to ATL 47 for 12 yards (J.Ledbetter).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331303",
+            "sequenceNumber": "130300",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "7:31"
+            },
+            "type": {
+              "text": "Sack",
+              "abbreviation": null
+            },
+            "statYardage": -10,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 53
+            },
+            "text": "(7:31) (Shotgun) D.Ridder sacked at ATL 47 for 0 yards (M.Sanders). PENALTY on ATL-D.Dalman, Offensive Holding, 10 yards, enforced at ATL 47 - No Play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331342",
+            "sequenceNumber": "134200",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "7:06"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 13,
+            "start": {
+              "down": 1,
+              "distance": 20,
+              "yardsToEndzone": 63
+            },
+            "text": "(7:06) (Shotgun) D.Ridder pass short right to D.London to 50 for 13 yards (J.Thompson).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331366",
+            "sequenceNumber": "136600",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "6:25"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 2,
+            "start": {
+              "down": 2,
+              "distance": 7,
+              "yardsToEndzone": 50
+            },
+            "text": "(6:25) (Shotgun) T.Allgeier left end to ARZ 48 for 2 yards (J.Luketa).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331387",
+            "sequenceNumber": "138700",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "5:41"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 6,
+            "start": {
+              "down": 3,
+              "distance": 5,
+              "yardsToEndzone": 48
+            },
+            "text": "(5:46) (Shotgun) D.Ridder pass short left to C.Patterson ran ob at ARZ 42 for 6 yards [J.Watt].",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331411",
+            "sequenceNumber": "141100",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "5:12"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 25,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 42
+            },
+            "text": "(5:12) (Shotgun) D.Ridder pass short middle to M.Pruitt pushed ob at ARZ 17 for 25 yards (J.Thompson). ARZ-J.Thompson was injured during the play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331445",
+            "sequenceNumber": "144500",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "4:38"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": -2,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 17
+            },
+            "text": "(4:38) A.Williams right end to ARZ 19 for -2 yards (Z.Collins, C.Matthew). ARZ-I.Simmons was injured during the play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331472",
+            "sequenceNumber": "147200",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "4:14"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 2,
+              "distance": 12,
+              "yardsToEndzone": 19
+            },
+            "text": "(4:16) (Shotgun) D.Ridder scrambles left end ran ob at ARZ 14 for 5 yards (J.Whittaker).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331503",
+            "sequenceNumber": "150300",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "3:39"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 3,
+              "distance": 7,
+              "yardsToEndzone": 14
+            },
+            "text": "(3:39) (Shotgun) D.Ridder pass short left to M.Pruitt to ARZ 9 for 5 yards (J.Whittaker).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331527",
+            "sequenceNumber": "152700",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "2:58"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 4,
+              "distance": 2,
+              "yardsToEndzone": 91
+            },
+            "text": "(2:58) (Shotgun) D.Ridder pass incomplete short right to D.London.",
+            "scoringPlay": false
+          }
+        ]
+      },
+      {
+        "id": "4014379337",
+        "team": {
+          "id": "22",
+          "displayName": "Arizona Cardinals",
+          "abbreviation": "ARI",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/ari.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "2:54"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "1:51"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "BLOCKED PUNT",
+        "displayResult": "Blocked Punt",
+        "plays": [
+          {
+            "id": "4014379331554",
+            "sequenceNumber": "155400",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "2:54"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 3,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 90
+            },
+            "text": "(2:54) (Shotgun) D.Blough pass short right to M.Brown to ARZ 13 for 3 yards (I.Oliver).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331578",
+            "sequenceNumber": "157800",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "2:20"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 2,
+              "distance": 7,
+              "yardsToEndzone": 65
+            },
+            "text": "(2:20) (No Huddle, Shotgun) D.Blough pass incomplete short left to T.McBride (I.Oliver).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331600",
+            "sequenceNumber": "160000",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "2:16"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 1,
+            "start": {
+              "down": 3,
+              "distance": 7,
+              "yardsToEndzone": 87
+            },
+            "text": "(2:17) (No Huddle, Shotgun) D.Blough pass short left to G.Dortch to ARZ 14 for 1 yard (D.Hall).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331624",
+            "sequenceNumber": "162400",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "2:00"
+            },
+            "type": {
+              "text": "Two-minute warning",
+              "abbreviation": "2Min Warn"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 4,
+              "distance": 6,
+              "yardsToEndzone": 86
+            },
+            "text": "Two-Minute Warning",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331631",
+            "sequenceNumber": "163100",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "2:00"
+            },
+            "type": {
+              "text": "Blocked Punt",
+              "abbreviation": "BP"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 4,
+              "distance": 6,
+              "yardsToEndzone": 86
+            },
+            "text": "(2:00) A.Lee punt is BLOCKED by R.Grant, Center-H.Bradley, ball out of bounds at ARZ 5.",
+            "scoringPlay": false
+          }
+        ]
+      },
+      {
+        "id": "4014379338",
+        "team": {
+          "id": "1",
+          "displayName": "Atlanta Falcons",
+          "abbreviation": "ATL",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/atl.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "1:51"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "1:47"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "TD",
+        "displayResult": "Touchdown",
+        "plays": [
+          {
+            "id": "4014379331663",
+            "sequenceNumber": "166300",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "1:47"
+            },
+            "type": {
+              "text": "Rushing Touchdown",
+              "abbreviation": "TD"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 1,
+              "distance": 5,
+              "yardsToEndzone": 5
+            },
+            "text": "Cordarrelle Patterson 5 Yd Rush Y.Koo extra point is GOOD, Center-L.McCullough, Holder-B.Pinion.",
+            "scoringPlay": true
+          }
+        ]
+      },
+      {
+        "id": "4014379339",
+        "team": {
+          "id": "22",
+          "displayName": "Arizona Cardinals",
+          "abbreviation": "ARI",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/ari.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "1:47"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "0:02"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "FG",
+        "displayResult": "Field Goal",
+        "plays": [
+          {
+            "id": "4014379331701",
+            "sequenceNumber": "170100",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "1:47"
+            },
+            "type": {
+              "text": "Kickoff Return (Offense)",
+              "abbreviation": null
+            },
+            "statYardage": 25,
+            "start": {
+              "down": 0,
+              "distance": 0,
+              "yardsToEndzone": 65
+            },
+            "text": "B.Pinion kicks 70 yards from ATL 35 to ARZ -5. P.Cooper to ARZ 20 for 25 yards (N.Kwiatkoski; A.Williams).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331723",
+            "sequenceNumber": "172300",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "1:42"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 80
+            },
+            "text": "(1:42) (Shotgun) J.Conner right end ran ob at ARZ 25 for 5 yards (A.Terrell).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331749",
+            "sequenceNumber": "174900",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "1:36"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 7,
+            "start": {
+              "down": 2,
+              "distance": 5,
+              "yardsToEndzone": 75
+            },
+            "text": "(1:36) (No Huddle, Shotgun) D.Blough pass short left to A.Baccellia to ARZ 32 for 7 yards (D.Alford). ATL-L.Carter was injured during the play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331761",
+            "sequenceNumber": "176100",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "1:23"
+            },
+            "type": {
+              "text": "Timeout",
+              "abbreviation": "TO"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 68
+            },
+            "text": "Timeout #1 by ATL at 01:23.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331773",
+            "sequenceNumber": "177300",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "1:23"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 8,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 68
+            },
+            "text": "(1:23) (Shotgun) J.Conner left guard to ARZ 40 for 8 yards (G.Jarrett; D.Malone).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331804",
+            "sequenceNumber": "180400",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "1:03"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 6,
+            "start": {
+              "down": 2,
+              "distance": 2,
+              "yardsToEndzone": 60
+            },
+            "text": "(1:03) (No Huddle, Shotgun) D.Blough pass short middle to J.Conner ran ob at ARZ 46 for 6 yards (C.Armstrong).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331833",
+            "sequenceNumber": "183300",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "0:57"
+            },
+            "type": {
+              "text": "Pass Interception Return",
+              "abbreviation": "INTR"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 54
+            },
+            "text": "(:57) (No Huddle, Shotgun) D.Blough pass deep right intended for M.Brown INTERCEPTED by A.Terrell at ATL 15. A.Terrell to ATL 15 for no gain. PENALTY on ATL-A.Ebiketie, Defensive Offside, 5 yards, enforced at ARZ 46 - No Play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331870",
+            "sequenceNumber": "187000",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "0:49"
+            },
+            "type": {
+              "text": "Penalty",
+              "abbreviation": "PEN"
+            },
+            "statYardage": -5,
+            "start": {
+              "down": 1,
+              "distance": 5,
+              "yardsToEndzone": 49
+            },
+            "text": "(:50) (No Huddle, Shotgun) PENALTY on ARZ-B.Price, False Start, 5 yards, enforced at ATL 49 - No Play. Snap Infraction",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331906",
+            "sequenceNumber": "190600",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "0:44"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 9,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 54
+            },
+            "text": "(:50) (No Huddle, Shotgun) D.Blough pass short left to A.Green to ATL 45 for 9 yards (C.Armstrong) [G.Jarrett].",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331930",
+            "sequenceNumber": "193000",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "0:27"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 4,
+            "start": {
+              "down": 2,
+              "distance": 1,
+              "yardsToEndzone": 45
+            },
+            "text": "(:33) (No Huddle, Shotgun) C.Clement right guard to ATL 41 for 4 yards (T.Horne).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331950",
+            "sequenceNumber": "195000",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "0:28"
+            },
+            "type": {
+              "text": "Timeout",
+              "abbreviation": "TO"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 2,
+              "distance": 10,
+              "yardsToEndzone": 41
+            },
+            "text": "Timeout #1 by ARZ at 00:28.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331957",
+            "sequenceNumber": "195700",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "0:20"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 13,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 41
+            },
+            "text": "(:28) (Shotgun) D.Blough pass short middle to J.Conner pushed ob at ATL 28 for 13 yards (A.Terrell) [L.Carter].",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379331982",
+            "sequenceNumber": "198200",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "0:20"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 4,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 28
+            },
+            "text": "(:20) (Shotgun) D.Blough scrambles right end pushed ob at ATL 24 for 4 yards (I.Oliver).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332008",
+            "sequenceNumber": "200800",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "0:06"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 6,
+            "start": {
+              "down": 2,
+              "distance": 6,
+              "yardsToEndzone": 24
+            },
+            "text": "(:12) (Shotgun) D.Blough pass short middle to T.McBride to ATL 18 for 6 yards (M.Walker).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332041",
+            "sequenceNumber": "204100",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "0:06"
+            },
+            "type": {
+              "text": "Timeout",
+              "abbreviation": "TO"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 2,
+              "distance": 6,
+              "yardsToEndzone": 24
+            },
+            "text": "Timeout #2 by ARZ at 00:06.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332048",
+            "sequenceNumber": "204800",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "0:02"
+            },
+            "type": {
+              "text": "Field Goal Good",
+              "abbreviation": "FG"
+            },
+            "statYardage": 36,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 18
+            },
+            "text": "(:06) M.Prater 36 yard field goal is GOOD, Center-H.Bradley, Holder-A.Lee.",
+            "scoringPlay": true
+          }
+        ]
+      },
+      {
+        "id": "40143793310",
+        "team": {
+          "id": "1",
+          "displayName": "Atlanta Falcons",
+          "abbreviation": "ATL",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/atl.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "0:02"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": null,
+          "yardsToEndzone": null
+        },
+        "result": "END OF HALF",
+        "displayResult": "End of Half",
+        "plays": [
+          {
+            "id": "4014379332068",
+            "sequenceNumber": "206800",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "0:02"
+            },
+            "type": {
+              "text": "Kickoff Return (Offense)",
+              "abbreviation": null
+            },
+            "statYardage": 23,
+            "start": {
+              "down": 0,
+              "distance": 0,
+              "yardsToEndzone": 65
+            },
+            "text": "M.Prater kicks 35 yards from ARZ 35 to ATL 30. A.Williams pushed ob at ARZ 47 for 23 yards (C.Banjo).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332095",
+            "sequenceNumber": "209500",
+            "period": {
+              "number": 2
+            },
+            "clock": {
+              "displayValue": "0:00"
+            },
+            "type": {
+              "text": "End of Half",
+              "abbreviation": "EH"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 0,
+              "distance": 0,
+              "yardsToEndzone": 0
+            },
+            "text": "END QUARTER 2",
+            "scoringPlay": false
+          }
+        ]
+      },
+      {
+        "id": "40143793311",
+        "team": {
+          "id": "1",
+          "displayName": "Atlanta Falcons",
+          "abbreviation": "ATL",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/atl.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "15:00"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "12:47"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "PUNT",
+        "displayResult": "Punt",
+        "plays": [
+          {
+            "id": "4014379332122",
+            "sequenceNumber": "212200",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "15:00"
+            },
+            "type": {
+              "text": "Kickoff",
+              "abbreviation": "K"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 0,
+              "distance": 0,
+              "yardsToEndzone": 65
+            },
+            "text": "M.Prater kicks 65 yards from ARZ 35 to end zone, Touchback.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332137",
+            "sequenceNumber": "213700",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "15:00"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 15,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 75
+            },
+            "text": "(15:00) (Shotgun) D.Ridder pass short left to C.Patterson to ATL 40 for 15 yards (J.Thompson).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332161",
+            "sequenceNumber": "216100",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "14:22"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 60
+            },
+            "text": "(14:22) (Shotgun) T.Allgeier left end to ATL 40 for no gain (C.Thomas; L.Fotu).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332182",
+            "sequenceNumber": "218200",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "13:43"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 2,
+              "distance": 10,
+              "yardsToEndzone": 38
+            },
+            "text": "(13:43) (Shotgun) D.Ridder pass incomplete deep right.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332204",
+            "sequenceNumber": "220400",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "13:37"
+            },
+            "type": {
+              "text": "Sack",
+              "abbreviation": null
+            },
+            "statYardage": -3,
+            "start": {
+              "down": 3,
+              "distance": 10,
+              "yardsToEndzone": 60
+            },
+            "text": "(13:37) (Shotgun) D.Ridder sacked at ATL 37 for -3 yards (J.Watt).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332223",
+            "sequenceNumber": "222300",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "12:55"
+            },
+            "type": {
+              "text": "Punt",
+              "abbreviation": "PUNT"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 4,
+              "distance": 13,
+              "yardsToEndzone": 63
+            },
+            "text": "(12:55) B.Pinion punts 62 yards to ARZ 1, Center-L.McCullough, out of bounds.",
+            "scoringPlay": false
+          }
+        ]
+      },
+      {
+        "id": "40143793312",
+        "team": {
+          "id": "22",
+          "displayName": "Arizona Cardinals",
+          "abbreviation": "ARI",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/ari.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "12:47"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "9:00"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "FG",
+        "displayResult": "Field Goal",
+        "plays": [
+          {
+            "id": "4014379332241",
+            "sequenceNumber": "224100",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "12:37"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 3,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 99
+            },
+            "text": "(12:47) S.Harlow reported in as eligible.  J.Conner right guard to ARZ 4 for 3 yards (A.Anderson; T.Andersen).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332264",
+            "sequenceNumber": "226400",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "12:17"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 26,
+            "start": {
+              "down": 2,
+              "distance": 7,
+              "yardsToEndzone": 96
+            },
+            "text": "(12:17) (No Huddle, Shotgun) D.Blough pass deep left to T.McBride pushed ob at ARZ 30 for 26 yards (R.Grant) [G.Jarrett].",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332293",
+            "sequenceNumber": "229300",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "11:44"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 1,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 70
+            },
+            "text": "(11:44) (No Huddle) J.Conner right guard to ARZ 31 for 1 yard (J.Hawkins; T.Horne).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332314",
+            "sequenceNumber": "231400",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "11:22"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 6,
+            "start": {
+              "down": 2,
+              "distance": 9,
+              "yardsToEndzone": 69
+            },
+            "text": "(11:22) (No Huddle, Shotgun) Direct snap to P.Cooper.  P.Cooper left end to ARZ 37 for 6 yards (J.Hawkins; A.Anderson).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332335",
+            "sequenceNumber": "233500",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "10:44"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 3,
+            "start": {
+              "down": 3,
+              "distance": 3,
+              "yardsToEndzone": 63
+            },
+            "text": "(10:44) (No Huddle, Shotgun) C.Clement right guard to ARZ 40 for 3 yards (L.Carter).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332356",
+            "sequenceNumber": "235600",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "10:14"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 75
+            },
+            "text": "(10:14) (No Huddle, Shotgun) D.Blough pass incomplete short right.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332382",
+            "sequenceNumber": "238200",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "10:03"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 2,
+              "distance": 10,
+              "yardsToEndzone": 75
+            },
+            "text": "(10:07) (Shotgun) D.Blough pass incomplete deep left to G.Dortch (C.Armstrong).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332404",
+            "sequenceNumber": "240400",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "10:00"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 40,
+            "start": {
+              "down": 3,
+              "distance": 10,
+              "yardsToEndzone": 60
+            },
+            "text": "(10:00) (Shotgun) D.Blough pass incomplete deep right to M.Brown. PENALTY on ATL-D.Alford, Defensive Pass Interference, 40 yards, enforced at ARZ 40 - No Play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332437",
+            "sequenceNumber": "243700",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "9:53"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 2,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 20
+            },
+            "text": "(9:53) (Shotgun) Direct snap to P.Cooper.  P.Cooper left tackle to ATL 18 for 2 yards (L.Carter; A.Anderson).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332460",
+            "sequenceNumber": "246000",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "9:14"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 2,
+              "distance": 8,
+              "yardsToEndzone": 63
+            },
+            "text": "(9:14) (Shotgun) D.Blough pass incomplete short middle to G.Dortch (I.Oliver).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332482",
+            "sequenceNumber": "248200",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "9:08"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 3,
+              "distance": 8,
+              "yardsToEndzone": 59
+            },
+            "text": "(9:08) (Shotgun) D.Blough pass incomplete deep left to A.Baccellia.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332493",
+            "sequenceNumber": "249300",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "9:04"
+            },
+            "type": {
+              "text": "Timeout",
+              "abbreviation": "TO"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 4,
+              "distance": 8,
+              "yardsToEndzone": 18
+            },
+            "text": "Timeout #1 by ATL at 09:04.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332504",
+            "sequenceNumber": "250400",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "9:00"
+            },
+            "type": {
+              "text": "Field Goal Good",
+              "abbreviation": "FG"
+            },
+            "statYardage": 36,
+            "start": {
+              "down": 4,
+              "distance": 8,
+              "yardsToEndzone": 18
+            },
+            "text": "(9:04) M.Prater 36 yard field goal is GOOD, Center-H.Bradley, Holder-A.Lee.",
+            "scoringPlay": true
+          }
+        ]
+      },
+      {
+        "id": "40143793313",
+        "team": {
+          "id": "1",
+          "displayName": "Atlanta Falcons",
+          "abbreviation": "ATL",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/atl.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "9:00"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "6:52"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "PUNT",
+        "displayResult": "Punt",
+        "plays": [
+          {
+            "id": "4014379332530",
+            "sequenceNumber": "253000",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "9:00"
+            },
+            "type": {
+              "text": "Kickoff",
+              "abbreviation": "K"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 0,
+              "distance": 0,
+              "yardsToEndzone": 65
+            },
+            "text": "M.Prater kicks 65 yards from ARZ 35 to end zone, Touchback.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332545",
+            "sequenceNumber": "254500",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "9:00"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 75
+            },
+            "text": "(9:00) (Shotgun) C.Patterson left tackle to ATL 25 for no gain (M.Dogbe).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332566",
+            "sequenceNumber": "256600",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "8:27"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 12,
+            "start": {
+              "down": 2,
+              "distance": 10,
+              "yardsToEndzone": 75
+            },
+            "text": "(8:27) (Shotgun) D.Ridder pass short left to D.Byrd to ATL 37 for 12 yards (J.Whittaker).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332590",
+            "sequenceNumber": "259000",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "7:58"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 55
+            },
+            "text": "(7:58) D.Ridder pass incomplete short right to C.Patterson.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332612",
+            "sequenceNumber": "261200",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "7:53"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 4,
+            "start": {
+              "down": 2,
+              "distance": 10,
+              "yardsToEndzone": 63
+            },
+            "text": "(7:53) (Shotgun) T.Allgeier left end to ATL 41 for 4 yards (M.Dogbe).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332633",
+            "sequenceNumber": "263300",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "7:08"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 3,
+              "distance": 6,
+              "yardsToEndzone": 62
+            },
+            "text": "(7:08) (Shotgun) D.Ridder pass incomplete short left to D.London (Z.Collins).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332655",
+            "sequenceNumber": "265500",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "7:03"
+            },
+            "type": {
+              "text": "Punt",
+              "abbreviation": "PUNT"
+            },
+            "statYardage": 14,
+            "start": {
+              "down": 4,
+              "distance": 6,
+              "yardsToEndzone": 59
+            },
+            "text": "(7:03) B.Pinion punts 40 yards to ARZ 19, Center-L.McCullough. P.Cooper to ARZ 33 for 14 yards (T.Andersen; K.Smith). PENALTY on ATL-M.Ford, Player Out of Bounds on Kick, 5 yards, enforced at ARZ 33.",
+            "scoringPlay": false
+          }
+        ]
+      },
+      {
+        "id": "40143793314",
+        "team": {
+          "id": "22",
+          "displayName": "Arizona Cardinals",
+          "abbreviation": "ARI",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/ari.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "6:52"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "4:02"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "MISSED FG",
+        "displayResult": "Missed FG",
+        "plays": [
+          {
+            "id": "4014379332691",
+            "sequenceNumber": "269100",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "6:52"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 7,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 62
+            },
+            "text": "(6:52) J.Conner left tackle to ARZ 45 for 7 yards (R.Grant; T.Andersen).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332712",
+            "sequenceNumber": "271200",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "6:24"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 16,
+            "start": {
+              "down": 2,
+              "distance": 3,
+              "yardsToEndzone": 55
+            },
+            "text": "(6:24) (No Huddle, Shotgun) J.Conner left guard to ATL 39 for 16 yards (R.Grant).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332733",
+            "sequenceNumber": "273300",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "5:48"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 3,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 39
+            },
+            "text": "(5:48) (No Huddle) J.Conner right tackle to ATL 36 for 3 yards (I.Oliver, R.Grant).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332754",
+            "sequenceNumber": "275400",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "5:12"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 11,
+            "start": {
+              "down": 2,
+              "distance": 7,
+              "yardsToEndzone": 36
+            },
+            "text": "(5:16) (No Huddle, Shotgun) D.Blough pass short right to M.Brown ran ob at ATL 25 for 11 yards.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332778",
+            "sequenceNumber": "277800",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "4:52"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 25
+            },
+            "text": "(4:59) (No Huddle, Shotgun) D.Blough pass short left to G.Dortch to ATL 25 for no gain (R.Evans, L.Carter).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332802",
+            "sequenceNumber": "280200",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "4:15"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 2,
+              "distance": 10,
+              "yardsToEndzone": 73
+            },
+            "text": "(4:15) (Shotgun) D.Blough pass incomplete short right to G.Dortch.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332824",
+            "sequenceNumber": "282400",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "4:11"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 3,
+              "distance": 10,
+              "yardsToEndzone": 85
+            },
+            "text": "(4:11) (Shotgun) D.Blough pass incomplete short right to G.Dortch.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332846",
+            "sequenceNumber": "284600",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "4:06"
+            },
+            "type": {
+              "text": "Field Goal Missed",
+              "abbreviation": "FGM"
+            },
+            "statYardage": 43,
+            "start": {
+              "down": 4,
+              "distance": 10,
+              "yardsToEndzone": 25
+            },
+            "text": "(4:06) M.Prater 43 yard field goal is No Good, Wide Left, Center-H.Bradley, Holder-A.Lee.",
+            "scoringPlay": false
+          }
+        ]
+      },
+      {
+        "id": "40143793315",
+        "team": {
+          "id": "1",
+          "displayName": "Atlanta Falcons",
+          "abbreviation": "ATL",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/atl.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "4:02"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "1:55"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "PUNT",
+        "displayResult": "Punt",
+        "plays": [
+          {
+            "id": "4014379332866",
+            "sequenceNumber": "286600",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "4:01"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 1,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 67
+            },
+            "text": "(4:02) (Shotgun) T.Allgeier right end to ATL 34 for 1 yard (M.Dogbe).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332892",
+            "sequenceNumber": "289200",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "3:26"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 8,
+            "start": {
+              "down": 2,
+              "distance": 9,
+              "yardsToEndzone": 66
+            },
+            "text": "(3:26) (No Huddle, Shotgun) T.Allgeier right end to ATL 42 for 8 yards (B.Niemann; C.Thomas).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332913",
+            "sequenceNumber": "291300",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "2:45"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": -3,
+            "start": {
+              "down": 3,
+              "distance": 1,
+              "yardsToEndzone": 58
+            },
+            "text": "(2:45) (No Huddle, Shotgun) T.Allgeier left tackle to ATL 39 for -3 yards (E.Turner, M.Dogbe).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332934",
+            "sequenceNumber": "293400",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "2:02"
+            },
+            "type": {
+              "text": "Punt",
+              "abbreviation": "PUNT"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 4,
+              "distance": 4,
+              "yardsToEndzone": 61
+            },
+            "text": "(2:02) B.Pinion punts 46 yards to ARZ 15, Center-L.McCullough, fair catch by P.Cooper.",
+            "scoringPlay": false
+          }
+        ]
+      },
+      {
+        "id": "40143793316",
+        "team": {
+          "id": "22",
+          "displayName": "Arizona Cardinals",
+          "abbreviation": "ARI",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/ari.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "1:55"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "13:27"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "DOWNS",
+        "displayResult": "Downs",
+        "plays": [
+          {
+            "id": "4014379332953",
+            "sequenceNumber": "295300",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "1:55"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 52
+            },
+            "text": "(1:55) S.Harlow reported in as eligible.  D.Blough pass incomplete short right to M.Brown.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379332977",
+            "sequenceNumber": "297700",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "1:49"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 12,
+            "start": {
+              "down": 2,
+              "distance": 10,
+              "yardsToEndzone": 85
+            },
+            "text": "(1:49) (No Huddle, Shotgun) D.Blough pass short right to J.Conner to ARZ 27 for 12 yards (I.Oliver; J.Hawkins).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333001",
+            "sequenceNumber": "300100",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "1:04"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 1,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 73
+            },
+            "text": "(1:04) (No Huddle) J.Conner right tackle to ARZ 28 for 1 yard (D.Hall; L.Carter).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333022",
+            "sequenceNumber": "302200",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "0:25"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 19,
+            "start": {
+              "down": 2,
+              "distance": 9,
+              "yardsToEndzone": 72
+            },
+            "text": "(:25) (No Huddle, Shotgun) D.Blough pass deep right to M.Brown to ARZ 47 for 19 yards (A.Terrell).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333046",
+            "sequenceNumber": "304600",
+            "period": {
+              "number": 3
+            },
+            "clock": {
+              "displayValue": "0:00"
+            },
+            "type": {
+              "text": "End Period",
+              "abbreviation": "EP"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 0,
+              "yardsToEndzone": 52
+            },
+            "text": "END QUARTER 3",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333065",
+            "sequenceNumber": "306500",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "15:00"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 31
+            },
+            "text": "(15:00) D.Blough pass incomplete deep left to T.McBride.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333087",
+            "sequenceNumber": "308700",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "14:55"
+            },
+            "type": {
+              "text": "Sack",
+              "abbreviation": null
+            },
+            "statYardage": -2,
+            "start": {
+              "down": 2,
+              "distance": 10,
+              "yardsToEndzone": 53
+            },
+            "text": "(14:55) (No Huddle, Shotgun) D.Blough sacked at ARZ 45 for -2 yards (A.Ogundeji).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333106",
+            "sequenceNumber": "310600",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "14:09"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 11,
+            "start": {
+              "down": 3,
+              "distance": 12,
+              "yardsToEndzone": 55
+            },
+            "text": "(14:09) (Shotgun) D.Blough pass short middle to G.Dortch to ATL 44 for 11 yards (D.Alford) [R.Evans].",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333130",
+            "sequenceNumber": "313000",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "13:34"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 4,
+              "distance": 1,
+              "yardsToEndzone": 44
+            },
+            "text": "(13:34) (No Huddle, Shotgun) C.Clement left guard to ATL 44 for no gain (I.Oliver; G.Jarrett).",
+            "scoringPlay": false
+          }
+        ]
+      },
+      {
+        "id": "40143793317",
+        "team": {
+          "id": "1",
+          "displayName": "Atlanta Falcons",
+          "abbreviation": "ATL",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/atl.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "13:27"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "9:36"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "FG",
+        "displayResult": "Field Goal",
+        "plays": [
+          {
+            "id": "4014379333151",
+            "sequenceNumber": "315100",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "13:27"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 11
+            },
+            "text": "(13:27) (Shotgun) D.Ridder pass incomplete deep left to D.Byrd (J.Whittaker).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333173",
+            "sequenceNumber": "317300",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "13:21"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 12,
+            "start": {
+              "down": 2,
+              "distance": 10,
+              "yardsToEndzone": 55
+            },
+            "text": "(13:21) (Shotgun) D.Ridder pass short right to D.London to ARZ 43 for 12 yards (E.Turner). Penalty on ARZ-E.Turner, Illegal Use of Hands, declined.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333208",
+            "sequenceNumber": "320800",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "12:50"
+            },
+            "type": {
+              "text": "Penalty",
+              "abbreviation": "PEN"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 43
+            },
+            "text": "(12:50) PENALTY on ARZ-M.Golden, Neutral Zone Infraction, 5 yards, enforced at ARZ 43 - No Play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333231",
+            "sequenceNumber": "323100",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "12:36"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 8,
+            "start": {
+              "down": 1,
+              "distance": 5,
+              "yardsToEndzone": 38
+            },
+            "text": "(12:36) C.Patterson right end to ARZ 30 for 8 yards (J.Thompson, D.Gardeck).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333252",
+            "sequenceNumber": "325200",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "11:58"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": -1,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 30
+            },
+            "text": "(11:58) C.Patterson left tackle to ARZ 31 for -1 yards (J.Luketa, M.Sanders).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333273",
+            "sequenceNumber": "327300",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "11:18"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 17,
+            "start": {
+              "down": 2,
+              "distance": 11,
+              "yardsToEndzone": 31
+            },
+            "text": "(11:18) (Shotgun) T.Allgeier left tackle to ARZ 14 for 17 yards (E.Turner).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333294",
+            "sequenceNumber": "329400",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "10:52"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 3,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 14
+            },
+            "text": "(10:52) (No Huddle) T.Allgeier left tackle to ARZ 11 for 3 yards (M.Jones; B.Niemann). ATL-T.Allgeier was injured during the play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333318",
+            "sequenceNumber": "331800",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "10:25"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 2,
+            "start": {
+              "down": 2,
+              "distance": 7,
+              "yardsToEndzone": 11
+            },
+            "text": "(10:25) (Shotgun) D.Ridder pass short right to A.Williams to ARZ 9 for 2 yards (M.Golden).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333342",
+            "sequenceNumber": "334200",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "9:45"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 3,
+              "distance": 5,
+              "yardsToEndzone": 61
+            },
+            "text": "(9:45) (Shotgun) D.Ridder pass incomplete short right to C.Patterson (C.Matthew).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333381",
+            "sequenceNumber": "338100",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "9:36"
+            },
+            "type": {
+              "text": "Field Goal Good",
+              "abbreviation": "FG"
+            },
+            "statYardage": 27,
+            "start": {
+              "down": 4,
+              "distance": 5,
+              "yardsToEndzone": 9
+            },
+            "text": "(9:40) Y.Koo 27 yard field goal is GOOD, Center-L.McCullough, Holder-B.Pinion.",
+            "scoringPlay": true
+          }
+        ]
+      },
+      {
+        "id": "40143793318",
+        "team": {
+          "id": "22",
+          "displayName": "Arizona Cardinals",
+          "abbreviation": "ARI",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:43Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/ari.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "9:36"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": {
+            "displayValue": "4:57"
+          },
+          "yardsToEndzone": null
+        },
+        "result": "FG",
+        "displayResult": "Field Goal",
+        "plays": [
+          {
+            "id": "4014379333400",
+            "sequenceNumber": "340000",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "9:36"
+            },
+            "type": {
+              "text": "Kickoff",
+              "abbreviation": "K"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 0,
+              "distance": 0,
+              "yardsToEndzone": 65
+            },
+            "text": "B.Pinion kicks 65 yards from ATL 35 to end zone, Touchback.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333415",
+            "sequenceNumber": "341500",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "9:36"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 44
+            },
+            "text": "(9:36) D.Blough pass incomplete deep middle to M.Brown.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333437",
+            "sequenceNumber": "343700",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "9:29"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 14,
+            "start": {
+              "down": 2,
+              "distance": 10,
+              "yardsToEndzone": 75
+            },
+            "text": "(9:30) (No Huddle, Shotgun) D.Blough pass short left to T.McBride pushed ob at ARZ 39 for 14 yards (R.Grant) [J.Johnson].",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333466",
+            "sequenceNumber": "346600",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "8:54"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 1,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 61
+            },
+            "text": "(8:54) C.Clement left tackle to ARZ 40 for 1 yard (A.Ebiketie).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333487",
+            "sequenceNumber": "348700",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "8:29"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 8,
+            "start": {
+              "down": 2,
+              "distance": 9,
+              "yardsToEndzone": 60
+            },
+            "text": "(8:33) (No Huddle, Shotgun) D.Blough pass short right to A.Green pushed ob at ARZ 48 for 8 yards (C.Armstrong).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333511",
+            "sequenceNumber": "351100",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "7:57"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 8,
+            "start": {
+              "down": 3,
+              "distance": 1,
+              "yardsToEndzone": 52
+            },
+            "text": "(7:57) (Shotgun) C.Clement right guard to ATL 44 for 8 yards (C.Armstrong; R.Grant). ATL-C.Armstrong was injured during the play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333540",
+            "sequenceNumber": "354000",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "7:33"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 47
+            },
+            "text": "(7:33) (Shotgun) D.Blough pass incomplete short right to T.McBride.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333562",
+            "sequenceNumber": "356200",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "7:28"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 12,
+            "start": {
+              "down": 2,
+              "distance": 10,
+              "yardsToEndzone": 44
+            },
+            "text": "(7:28) (Shotgun) C.Clement right tackle to ATL 32 for 12 yards (I.Oliver).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333583",
+            "sequenceNumber": "358300",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "7:05"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": -5,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 32
+            },
+            "text": "(7:09) (No Huddle, Shotgun) D.Blough pass incomplete short right. PENALTY on ARZ-W.Hernandez, Ineligible Downfield Pass, 5 yards, enforced at ATL 32 - No Play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333605",
+            "sequenceNumber": "360500",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "7:05"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": -10,
+            "start": {
+              "down": 1,
+              "distance": 15,
+              "yardsToEndzone": 37
+            },
+            "text": "(7:05) (Shotgun) D.Blough scrambles left end to ATL 31 for 6 yards (R.Evans). PENALTY on ARZ-J.Jones, Offensive Holding, 10 yards, enforced at ATL 37 - No Play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333649",
+            "sequenceNumber": "364900",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "6:33"
+            },
+            "type": {
+              "text": "Pass Incompletion",
+              "abbreviation": null
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 25,
+              "yardsToEndzone": 65
+            },
+            "text": "(6:33) (Shotgun) D.Blough pass incomplete deep left to M.Brown.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333671",
+            "sequenceNumber": "367100",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "6:27"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 4,
+            "start": {
+              "down": 2,
+              "distance": 25,
+              "yardsToEndzone": 47
+            },
+            "text": "(6:27) (Shotgun) C.Clement left tackle to ATL 43 for 4 yards (J.Dalton, J.Hawkins).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333692",
+            "sequenceNumber": "369200",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "5:46"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 4,
+            "start": {
+              "down": 3,
+              "distance": 21,
+              "yardsToEndzone": 43
+            },
+            "text": "(5:46) (Shotgun) D.Blough pass short left to T.McBride to ATL 39 for 4 yards (A.Terrell).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333716",
+            "sequenceNumber": "371600",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "4:57"
+            },
+            "type": {
+              "text": "Field Goal Good",
+              "abbreviation": "FG"
+            },
+            "statYardage": 57,
+            "start": {
+              "down": 4,
+              "distance": 17,
+              "yardsToEndzone": 39
+            },
+            "text": "(5:02) M.Prater 57 yard field goal is GOOD, Center-H.Bradley, Holder-A.Lee.",
+            "scoringPlay": true
+          }
+        ]
+      },
+      {
+        "id": "40143793319",
+        "team": {
+          "id": "1",
+          "displayName": "Atlanta Falcons",
+          "abbreviation": "ATL",
+          "logos": [
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "default"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
+              "height": 500
+            },
+            {
+              "lastUpdated": "2024-06-25T18:44Z",
+              "width": 500,
+              "alt": "",
+              "rel": [
+                "full",
+                "dark"
+              ],
+              "href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/atl.png",
+              "height": 500
+            }
+          ]
+        },
+        "start": {
+          "clock": {
+            "displayValue": "4:57"
+          },
+          "down": null,
+          "distance": null,
+          "yardsToEndzone": null
+        },
+        "end": {
+          "clock": null,
+          "yardsToEndzone": null
+        },
+        "result": "FG",
+        "displayResult": "Field Goal",
+        "plays": [
+          {
+            "id": "4014379333735",
+            "sequenceNumber": "373500",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "4:57"
+            },
+            "type": {
+              "text": "Kickoff",
+              "abbreviation": "K"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 0,
+              "distance": 0,
+              "yardsToEndzone": 65
+            },
+            "text": "M.Prater kicks 65 yards from ARZ 35 to end zone, Touchback.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333750",
+            "sequenceNumber": "375000",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "4:57"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 7,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 75
+            },
+            "text": "(4:57) D.Ridder pass short right to C.Patterson to ATL 32 for 7 yards (Z.Collins).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333774",
+            "sequenceNumber": "377400",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "4:18"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 22,
+            "start": {
+              "down": 2,
+              "distance": 3,
+              "yardsToEndzone": 68
+            },
+            "text": "(4:18) (No Huddle) C.Patterson right tackle to ARZ 46 for 22 yards (J.Thompson).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333795",
+            "sequenceNumber": "379500",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "3:54"
+            },
+            "type": {
+              "text": "Penalty",
+              "abbreviation": "PEN"
+            },
+            "statYardage": 5,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 46
+            },
+            "text": "(3:54) (No Huddle) PENALTY on ARZ-J.Watt, Neutral Zone Infraction, 5 yards, enforced at ARZ 46 - No Play.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333818",
+            "sequenceNumber": "381800",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "3:53"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 1,
+            "start": {
+              "down": 1,
+              "distance": 5,
+              "yardsToEndzone": 41
+            },
+            "text": "(3:53) (No Huddle) T.Allgeier right tackle to ARZ 40 for 1 yard (I.Simmons).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333839",
+            "sequenceNumber": "383900",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "3:19"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 10,
+            "start": {
+              "down": 2,
+              "distance": 4,
+              "yardsToEndzone": 40
+            },
+            "text": "(3:19) (No Huddle, Shotgun) D.Ridder pass short middle to D.London to ARZ 30 for 10 yards (J.Whittaker).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333863",
+            "sequenceNumber": "386300",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "2:26"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 3,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 30
+            },
+            "text": "(2:38) C.Patterson right tackle to ARZ 27 for 3 yards (J.Thompson).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333883",
+            "sequenceNumber": "388300",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "2:28"
+            },
+            "type": {
+              "text": "Timeout",
+              "abbreviation": "TO"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 2,
+              "distance": 7,
+              "yardsToEndzone": 27
+            },
+            "text": "Timeout #1 by ARZ at 02:28.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333891",
+            "sequenceNumber": "389100",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "2:28"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 2,
+              "distance": 7,
+              "yardsToEndzone": 27
+            },
+            "text": "(2:28) T.Allgeier right end to ARZ 27 for no gain (M.Sanders).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333902",
+            "sequenceNumber": "390200",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "2:00"
+            },
+            "type": {
+              "text": "Two-minute warning",
+              "abbreviation": "2Min Warn"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 3,
+              "distance": 8,
+              "yardsToEndzone": 28
+            },
+            "text": "Two-Minute Warning",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333912",
+            "sequenceNumber": "391200",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "1:53"
+            },
+            "type": {
+              "text": "Pass Reception",
+              "abbreviation": "REC"
+            },
+            "statYardage": 14,
+            "start": {
+              "down": 3,
+              "distance": 7,
+              "yardsToEndzone": 27
+            },
+            "text": "(2:00) (Shotgun) D.Ridder pass short left to M.Pruitt to ARZ 13 for 14 yards (C.Banjo; J.Whittaker).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333942",
+            "sequenceNumber": "394200",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "1:53"
+            },
+            "type": {
+              "text": "Timeout",
+              "abbreviation": "TO"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 13
+            },
+            "text": "Timeout #2 by ARZ at 01:53.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333950",
+            "sequenceNumber": "395000",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "1:48"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 4,
+            "start": {
+              "down": 1,
+              "distance": 10,
+              "yardsToEndzone": 13
+            },
+            "text": "(1:53) (Shotgun) T.Allgeier right tackle to ARZ 9 for 4 yards (Z.Collins).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333970",
+            "sequenceNumber": "397000",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "1:49"
+            },
+            "type": {
+              "text": "Timeout",
+              "abbreviation": "TO"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 2,
+              "distance": 6,
+              "yardsToEndzone": 9
+            },
+            "text": "Timeout #3 by ARZ at 01:49.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333978",
+            "sequenceNumber": "397800",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "1:49"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 4,
+            "start": {
+              "down": 2,
+              "distance": 6,
+              "yardsToEndzone": 9
+            },
+            "text": "(1:49) T.Allgeier right end to ARZ 5 for 4 yards (L.Fotu).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333989",
+            "sequenceNumber": "398900",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "1:03"
+            },
+            "type": {
+              "text": "Timeout",
+              "abbreviation": "TO"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 3,
+              "distance": 2,
+              "yardsToEndzone": 5
+            },
+            "text": "Timeout #2 by ATL at 01:03.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379333999",
+            "sequenceNumber": "399900",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "1:03"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": 3,
+            "start": {
+              "down": 3,
+              "distance": 2,
+              "yardsToEndzone": 5
+            },
+            "text": "(1:03) T.Allgeier right end to ARZ 2 for 3 yards (I.Simmons).",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379334027",
+            "sequenceNumber": "402700",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "0:20"
+            },
+            "type": {
+              "text": "Rush",
+              "abbreviation": "RUSH"
+            },
+            "statYardage": -1,
+            "start": {
+              "down": 1,
+              "distance": 2,
+              "yardsToEndzone": 2
+            },
+            "text": "(:20) D.Ridder kneels to ARZ 3 for -1 yards.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379334038",
+            "sequenceNumber": "403800",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "0:02"
+            },
+            "type": {
+              "text": "Timeout",
+              "abbreviation": "TO"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 2,
+              "distance": 3,
+              "yardsToEndzone": 3
+            },
+            "text": "Timeout #3 by ATL at 00:02.",
+            "scoringPlay": false
+          },
+          {
+            "id": "4014379334048",
+            "sequenceNumber": "404800",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "0:00"
+            },
+            "type": {
+              "text": "Field Goal Good",
+              "abbreviation": "FG"
+            },
+            "statYardage": 21,
+            "start": {
+              "down": 2,
+              "distance": 3,
+              "yardsToEndzone": 3
+            },
+            "text": "(:02) Y.Koo 21 yard field goal is GOOD, Center-L.McCullough, Holder-B.Pinion.",
+            "scoringPlay": true
+          },
+          {
+            "id": "4014379334074",
+            "sequenceNumber": "407400",
+            "period": {
+              "number": 4
+            },
+            "clock": {
+              "displayValue": "0:00"
+            },
+            "type": {
+              "text": "End of Game",
+              "abbreviation": "EG"
+            },
+            "statYardage": 0,
+            "start": {
+              "down": 0,
+              "distance": 0,
+              "yardsToEndzone": 0
+            },
+            "text": "END GAME",
+            "scoringPlay": false
+          }
+        ]
+      }
+    ]
+  }
+}

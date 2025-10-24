@@ -14,16 +14,24 @@ class DatabaseNotConfiguredError(RuntimeError):
 
 
 @lru_cache
-def _engine(settings: Settings) -> Engine:
-    if not settings.database_url:
+def _engine(database_url: str) -> Engine:
+    if not database_url:
         raise DatabaseNotConfiguredError("DATABASE_URL is not configured.")
-    return create_engine(settings.database_url, pool_pre_ping=True, future=True)
+    if database_url.startswith("sqlite"):
+        return create_engine(
+            database_url,
+            pool_pre_ping=True,
+            future=True,
+            connect_args={"check_same_thread": False},
+        )
+    return create_engine(database_url, pool_pre_ping=True, future=True)
 
 
 def get_session_factory(settings: Settings) -> sessionmaker[Session]:
     """Return a SQLAlchemy sessionmaker bound to the configured database."""
+    database_url = settings.database_url or ""
     return sessionmaker(
-        bind=_engine(settings), autoflush=False, autocommit=False, expire_on_commit=False
+        bind=_engine(database_url), autoflush=False, autocommit=False, expire_on_commit=False
     )
 
 

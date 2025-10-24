@@ -34,6 +34,8 @@ Legend: **Secret** = keep in GCP Secret Manager or CI secrets. **Public** = safe
 | `COOKIE_SECURE` | `true` | Force HTTPS cookies | No | Backend env |
 | `RATE_LIMIT_WINDOW` | `60` | Seconds per window | No | Backend env |
 | `RATE_LIMIT_MAX` | `120` | Requests per window | No | Backend env |
+| `PYESPN_SEASON_YEAR` | `2025` | Default season for PyESPN polling | No | Backend env |
+| `PYESPN_POLL_MS` | `2000` | Millisecond cadence for scoreboard refresh | No | Backend env |
 | `CACHE_TTL_DEFAULT` | `300` | Seconds for generic cache | No | Backend env |
 | `WS_HEARTBEAT_SEC` | `25` | Ping interval to keep WS alive | No | Backend env |
 | `FEATURE_WEATHER` | `false` | Gate weather features | No | Backend env |
@@ -111,8 +113,6 @@ Legend: **Secret** = keep in GCP Secret Manager or CI secrets. **Public** = safe
 |---|---|---|---|---|
 | `S3_BUCKET_ASSETS` | `rosterpilot-assets` | If using R2/S3 for images | No | Backend/Build |
 | `ASSETS_BASE_URL` | `https://static.westfam.media` | CDN origin for assets | No | Frontend |
-| `PYESPN_SEASON_YEAR` | `2025` | Default season for ingest | No | Backend |
-| `PYESPN_POLL_MS` | `2000` | Live poll interval | No | Backend |
 | `ADMIN_EMAILS` | `andy@westfam.media` | Admin gates | No | Backend |
 | `MAINTENANCE_MODE` | `false` | Read-only switch | No | Backend |
 
@@ -142,6 +142,8 @@ COOKIE_SECURE=true
 CORS_ALLOWED_ORIGINS=https://rosterpilot.westfam.media
 CACHE_TTL_DEFAULT=300
 WS_HEARTBEAT_SEC=25
+PYESPN_SEASON_YEAR=2022
+PYESPN_POLL_MS=2000
 
 FEATURE_WEATHER=false
 FEATURE_REPLAY=true

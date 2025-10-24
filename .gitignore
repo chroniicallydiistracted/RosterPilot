@@ -136,3 +136,4 @@ coverage/
 .Trashes
 ehthumbs.db
 Thumbs.db
+backend/tests/test_app.db

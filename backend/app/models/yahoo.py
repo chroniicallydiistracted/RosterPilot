@@ -3,9 +3,19 @@
 from __future__ import annotations
 
 import uuid
+from datetime import datetime
 from typing import Any
 
-from sqlalchemy import JSON, ForeignKey, Integer, PrimaryKeyConstraint, String
+from sqlalchemy import (
+    JSON,
+    Boolean,
+    DateTime,
+    Float,
+    ForeignKey,
+    Integer,
+    PrimaryKeyConstraint,
+    String,
+)
 from sqlalchemy.dialects.postgresql import UUID as PGUUID
 from sqlalchemy.orm import Mapped, mapped_column
 
@@ -24,6 +34,8 @@ class YahooLeague(Base):
     season: Mapped[int] = mapped_column(Integer, nullable=False)
     name: Mapped[str] = mapped_column(String(128), nullable=False)
     scoring_json: Mapped[dict[str, Any]] = mapped_column(JSON, nullable=False)
+    status: Mapped[str] = mapped_column(String(32), nullable=False, default="in_season")
+    last_synced: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
 
 
 class YahooTeam(Base):
@@ -37,6 +49,7 @@ class YahooTeam(Base):
     )
     name: Mapped[str] = mapped_column(String(128), nullable=False)
     manager: Mapped[str] = mapped_column(String(128), nullable=False)
+    is_user_team: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
 
 
 class YahooPlayer(Base):
@@ -66,3 +79,6 @@ class YahooRoster(Base):
     yahoo_player_id: Mapped[str] = mapped_column(
         String(64), ForeignKey("yahoo_players.yahoo_player_id", ondelete="SET NULL"), nullable=True
     )
+    is_starter: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
+    projected_points: Mapped[float] = mapped_column(Float, nullable=False, default=0.0)
+    actual_points: Mapped[float | None] = mapped_column(Float, nullable=True)

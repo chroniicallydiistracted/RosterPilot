@@ -2,22 +2,90 @@
 
 from __future__ import annotations
 
+import base64
 import os
 from collections.abc import Iterator
+from pathlib import Path
 
-import pytest
-from fastapi.testclient import TestClient
+TEST_DB_PATH = Path(__file__).resolve().parent / "test_app.db"
 
 os.environ["APP_ENV"] = "test"
 os.environ["SENTRY_DSN"] = ""
+os.environ["DATABASE_URL"] = f"sqlite:///{TEST_DB_PATH}"
+os.environ["TOKEN_ENC_KEY"] = base64.urlsafe_b64encode(b"fernet-key-for-tests-32-bytes!!!").decode()
+os.environ["SESSION_SECRET"] = "test-session-secret"
+os.environ["YAHOO_CLIENT_ID"] = "test-client-id"
+os.environ["YAHOO_CLIENT_SECRET"] = "test-client-secret"
+os.environ["YAHOO_REDIRECT_URI"] = "https://example.com/callback"
+os.environ["PYESPN_SEASON_YEAR"] = "2022"
 
+import pytest
+from fastapi.testclient import TestClient
+from sqlalchemy.orm import Session, sessionmaker
+
+from app.core.config import get_settings
+from app.dependencies import provide_db_session
+from app.db.session import _engine
 from app.main import create_app  # noqa: E402
+from app.models import Base
+from app.security.crypto import TokenCipher
+from app.services.pyespn.ingest import PyESPNIngestionService
+from app.services.yahoo.fixtures import load_test_user_bundle
+from app.services.yahoo.ingest import YahooIngestionService
+from .fixtures.pyespn import load_play_by_play_fixture, load_scoreboard_fixture
+
+get_settings.cache_clear()
+
+
+@pytest.fixture(scope="session", autouse=True)
+def _initialize_database() -> Iterator[None]:
+    """Create the SQLite schema and seed Yahoo fixtures for tests."""
+
+    if TEST_DB_PATH.exists():
+        TEST_DB_PATH.unlink()
+
+    get_settings.cache_clear()
+    settings = get_settings()
+    database_url = settings.database_url or f"sqlite:///{TEST_DB_PATH}"
+    engine = _engine(database_url)
+    Base.metadata.drop_all(engine)
+    Base.metadata.create_all(engine)
+
+    with Session(engine) as session:
+        cipher = TokenCipher.from_settings(settings)
+        ingestion = YahooIngestionService(session=session, cipher=cipher)
+        bundle = load_test_user_bundle()
+        ingestion.ingest_bundle(bundle)
+
+        pyespn_ingestion = PyESPNIngestionService(session=session)
+        scoreboard = load_scoreboard_fixture()
+        pyespn_ingestion.ingest_scoreboard(scoreboard)
+        pyespn_ingestion.ingest_play_by_play(
+            "401437933", load_play_by_play_fixture("401437933")
+        )
+        session.commit()
+
+    yield
 
 
 @pytest.fixture(scope="session")
 def client() -> Iterator[TestClient]:
     """Provide a FastAPI test client backed by the scaffold application."""
 
+    get_settings.cache_clear()
+    settings = get_settings()
+    database_url = settings.database_url or f"sqlite:///{TEST_DB_PATH}"
     app = create_app()
+
+    session_factory = sessionmaker(bind=_engine(database_url), autoflush=False, autocommit=False, expire_on_commit=False)
+
+    def override_db_session():
+        session = session_factory()
+        try:
+            yield session
+        finally:
+            session.close()
+
+    app.dependency_overrides[provide_db_session] = override_db_session
     with TestClient(app) as test_client:
         yield test_client
