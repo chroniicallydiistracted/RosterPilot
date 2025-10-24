@@ -1,13 +1,16 @@
 """Application entry point for the RosterPilot backend service."""
 
 import os
+import time
 from typing import Any
 
 import sentry_sdk
-from fastapi import APIRouter, FastAPI
+from fastapi import APIRouter, FastAPI, Request
 
 from app.api.routes import games, health, leagues, me, meta, oauth
 from app.core.config import get_settings
+from app.core.metrics import RequestMetrics
+from app.core.rate_limiter import SlidingWindowRateLimiter
 from app.ws import router as ws_router
 
 
@@ -71,6 +74,26 @@ def create_app() -> FastAPI:
         fastapi_instrumentor.instrument_app(app)
 
     settings = get_settings()
+
+    # ------------------------------------------------------------------
+    # Runtime metrics & rate limiting primitives
+    # ------------------------------------------------------------------
+    app.state.request_metrics = RequestMetrics(max_samples=1024)
+    app.state.rate_limiter = SlidingWindowRateLimiter(
+        max_requests=settings.rate_limit_max,
+        window_seconds=settings.rate_limit_window,
+    )
+
+    @app.middleware("http")
+    async def record_request_metrics(request: Request, call_next):  # type: ignore[override]
+        start = time.perf_counter()
+        response = await call_next(request)
+        duration_ms = (time.perf_counter() - start) * 1000
+        metrics: RequestMetrics | None = getattr(request.app.state, "request_metrics", None)
+        if metrics is not None:
+            metrics.record(request.url.path, duration_ms)
+        response.headers.setdefault("X-Request-Duration-Ms", f"{duration_ms:.2f}")
+        return response
 
     app.include_router(health.router)
 

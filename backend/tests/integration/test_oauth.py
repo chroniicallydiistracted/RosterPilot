@@ -16,6 +16,7 @@ from app.models.user import OAuthToken, User
 
 
 def test_authorize_endpoint_returns_state(client: TestClient) -> None:
+    client.app.state.rate_limiter.reset()
     response = client.get("/api/auth/yahoo/authorize")
     assert response.status_code == 200
     data = response.json()
@@ -26,6 +27,7 @@ def test_authorize_endpoint_returns_state(client: TestClient) -> None:
 
 @respx.mock
 def test_callback_exchanges_code_and_persists_tokens(client: TestClient) -> None:
+    client.app.state.rate_limiter.reset()
     authorize = client.get("/api/auth/yahoo/authorize")
     state = authorize.json()["state"]
 

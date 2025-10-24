@@ -8,7 +8,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.orm import Session
 
 from app.core.config import Settings
-from app.dependencies import provide_db_session
+from app.dependencies import enforce_rate_limit, provide_db_session
 from app.dependencies.settings import provide_settings
 from app.security.state import OAuthStateError, OAuthStateManager
 from app.services.auth import YahooOAuthService
@@ -19,7 +19,7 @@ SettingsDep = Annotated[Settings, Depends(provide_settings)]
 SessionDep = Annotated[Session, Depends(provide_db_session)]
 
 
-@router.get("/yahoo/authorize")
+@router.get("/yahoo/authorize", dependencies=[Depends(enforce_rate_limit)])
 async def yahoo_authorize(settings: SettingsDep) -> dict[str, str]:
     """Generate the Yahoo authorization URL and state token."""
 
@@ -33,7 +33,7 @@ async def yahoo_authorize(settings: SettingsDep) -> dict[str, str]:
     return {"authorization_url": url, "state": state}
 
 
-@router.get("/yahoo/callback")
+@router.get("/yahoo/callback", dependencies=[Depends(enforce_rate_limit)])
 async def yahoo_callback(
     settings: SettingsDep,
     session: SessionDep,

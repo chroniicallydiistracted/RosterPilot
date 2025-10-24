@@ -72,5 +72,7 @@ Available npm/pnpm/yarn scripts at the repo root:
 
 - `npm run lint` – Executes frontend ESLint and backend Ruff/Mypy.
 - `npm run test` – Placeholder hook for backend pytest and frontend Jest.
+- `poetry run pip-audit` (from `backend/`) and `npm audit --omit=dev --audit-level=high`
+  surface dependency vulnerabilities locally before CI.
 
 Keep lint, type checks, and tests green before opening pull requests.

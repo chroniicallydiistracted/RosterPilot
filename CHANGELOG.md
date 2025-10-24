@@ -35,3 +35,14 @@ as we progress through the scaffold and implementation phases.
   migration `20251023_0004_canonical_mapping_seed` to harden the identifier map.
 - Unit tests validating the reference seeds, canonical mapping behavior, and
   Yahoo ingestion resilience to manual overrides.
+
+## [0.4.0] - 2025-10-23
+### Added
+- Sliding window rate limiter enforced on Yahoo OAuth authorize/callback routes
+  with coverage in integration tests.
+- Request metrics collector and middleware emitting `X-Request-Duration-Ms`
+  headers and enabling percentile checks against the 250 ms performance budget.
+- Security CI job running Gitleaks, `pip-audit`, and `npm audit` alongside
+  local developer guidance in `docs/DEV_SETUP.md`.
+- Unit tests for the rate limiter and metrics utilities plus integration tests
+  verifying rate-limit responses and timing instrumentation.

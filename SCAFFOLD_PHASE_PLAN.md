@@ -221,5 +221,8 @@
 - [x] Phase 8 — Frontend dashboard & game center: App Router shell with league/week selectors, SWR-powered data hooks,
   dashboard/optimizer views honoring provenance, live game center consuming `/games` REST + `/ws/games/{event_id}` streams, and
   Jest coverage for utilities to anchor future QA.
+- [x] Phase 9 — QA hardening & pre-launch: Added OAuth rate limiting, request timing instrumentation, CI security scans
+  (Gitleaks, `pip-audit`, `npm audit`), integration tests spanning rate limit + performance assertions, and developer docs
+  updates guiding local vulnerability checks.
 
 Prepared by: **Lead Architect Agent**
