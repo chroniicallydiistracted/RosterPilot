@@ -1,7 +1,9 @@
 """Yahoo Fantasy Sports API client scaffolding."""
 
+from __future__ import annotations
+
 from dataclasses import dataclass
-from typing import Any, Optional
+from typing import Any
 
 import httpx
 
@@ -16,7 +18,7 @@ class YahooClient:
     """
 
     settings: Settings
-    http_client: Optional[httpx.AsyncClient] = None
+    http_client: httpx.AsyncClient | None = None
 
     BASE_URL: str = "https://fantasysports.yahooapis.com/fantasy/v2"
 

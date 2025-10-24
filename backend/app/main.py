@@ -1,19 +1,13 @@
 """Application entry point for the RosterPilot backend service."""
 
 import os
+from typing import Any
 
-from fastapi import FastAPI
-
-# Sentry & OpenTelemetry
 import sentry_sdk
-from opentelemetry import trace
-from opentelemetry.exporter.google_cloud_trace import GoogleCloudTraceSpanExporter
-from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
-from opentelemetry.instrumentation.httpx import HTTPXClientInstrumentor
-from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchSpanProcessor
+from fastapi import APIRouter, FastAPI
 
-from app.api.routes import health
+from app.api.routes import games, health, leagues, me
+from app.core.config import get_settings
 
 
 def create_app() -> FastAPI:
@@ -29,12 +23,25 @@ def create_app() -> FastAPI:
             # Set profiles_sample_rate to 1.0 to profile 100%
             # of sampled transactions.
             profiles_sample_rate=1.0,
-            integrations=[sentry_sdk.integrations.fastapi.FastAPIIntegration()],
         )
+
+    instrumentation_enabled = os.getenv("APP_ENV") == "production"
+    fastapi_instrumentor: Any | None = None
 
     # Initialize OpenTelemetry for distributed tracing in production.
     # This uses the application's default credentials on Cloud Run.
-    if os.getenv("APP_ENV") == "production":
+    if instrumentation_enabled:
+        from opentelemetry import trace
+        from opentelemetry.exporter.cloud_trace import CloudTraceSpanExporter
+        from opentelemetry.instrumentation.fastapi import (
+            FastAPIInstrumentor,  # type: ignore[import]
+        )
+        from opentelemetry.instrumentation.httpx import (
+            HTTPXClientInstrumentor,  # type: ignore[import]
+        )
+        from opentelemetry.sdk.trace import TracerProvider
+        from opentelemetry.sdk.trace.export import BatchSpanProcessor
+
         tracer_provider = TracerProvider()
         exporter = GoogleCloudTraceSpanExporter()
         processor = BatchSpanProcessor(exporter)
@@ -43,6 +50,7 @@ def create_app() -> FastAPI:
 
         # Instrument httpx to trace outgoing requests
         HTTPXClientInstrumentor().instrument()
+        fastapi_instrumentor = FastAPIInstrumentor
 
     app = FastAPI(
         title="RosterPilot API",
@@ -54,10 +62,19 @@ def create_app() -> FastAPI:
     )
 
     # Instrument the FastAPI app after it's created for production
-    if os.getenv("APP_ENV") == "production":
-        FastAPIInstrumentor.instrument_app(app)
+    if instrumentation_enabled and fastapi_instrumentor is not None:
+        fastapi_instrumentor.instrument_app(app)
+
+    settings = get_settings()
 
     app.include_router(health.router)
+
+    api_router = APIRouter()
+    api_router.include_router(me.router)
+    api_router.include_router(leagues.router)
+    api_router.include_router(games.router)
+
+    app.include_router(api_router, prefix=settings.api_prefix)
 
     return app
 
