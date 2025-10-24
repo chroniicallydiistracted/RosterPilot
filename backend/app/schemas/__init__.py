@@ -19,10 +19,12 @@ from app.schemas.leagues import (
     TeamSummary,
     UserLeaguesResponse,
 )
+from app.schemas.runtime import FeatureFlags, RuntimeConfigResponse
 
 __all__ = [
     "DriveSummary",
     "HealthStatus",
+    "FeatureFlags",
     "LeagueRosterResponse",
     "LeagueSummary",
     "LiveGameSummary",
@@ -31,6 +33,7 @@ __all__ = [
     "PlayByPlayResponse",
     "PlayDetail",
     "PlayerProjection",
+    "RuntimeConfigResponse",
     "RosterSlot",
     "TeamGameState",
     "TeamSummary",

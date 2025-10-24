@@ -6,8 +6,9 @@ from typing import Any
 import sentry_sdk
 from fastapi import APIRouter, FastAPI
 
-from app.api.routes import games, health, leagues, me, oauth
+from app.api.routes import games, health, leagues, me, meta, oauth
 from app.core.config import get_settings
+from app.ws import router as ws_router
 
 
 def create_app() -> FastAPI:
@@ -78,8 +79,10 @@ def create_app() -> FastAPI:
     api_router.include_router(me.router)
     api_router.include_router(leagues.router)
     api_router.include_router(games.router)
+    api_router.include_router(meta.router)
 
     app.include_router(api_router, prefix=settings.api_prefix)
+    app.include_router(ws_router)
 
     return app
 
