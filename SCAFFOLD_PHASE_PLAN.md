@@ -218,5 +218,8 @@
   delta + replay flows with deterministic fixtures.
 - [x] Phase 7 — Optimizer v1: Added solver-backed lineup optimizer with CP-SAT + greedy fallback, slot/position normalization
   helpers, API response updates surfacing recommended starters and rationale, and unit tests covering optimizer heuristics.
+- [x] Phase 8 — Frontend dashboard & game center: App Router shell with league/week selectors, SWR-powered data hooks,
+  dashboard/optimizer views honoring provenance, live game center consuming `/games` REST + `/ws/games/{event_id}` streams, and
+  Jest coverage for utilities to anchor future QA.
 
 Prepared by: **Lead Architect Agent**

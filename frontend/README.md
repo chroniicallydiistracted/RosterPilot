@@ -1,22 +1,60 @@
-# Frontend Scaffold
+# Frontend Application
 
-The `frontend/` directory houses the Next.js application for the RosterPilot dashboard,
-optimizer, and live game center. This initial scaffold provides a TypeScript-ready layout
-with placeholders for shared components, hooks, styles, and tests.
+The Next.js frontend delivers the companion experience outlined in
+`SCAFFOLD_PHASE_PLAN.md` and the frontend feature overview. It now includes
+data-backed dashboard panels, optimizer insights, the live game center, and
+roadmap placeholders for waivers and trades—all aligned with the read-only Yahoo
+scope and PyESPN provenance rules.
 
-## Layout
+## Directory Highlights
 
-- `app/` – App Router entrypoints (`layout.tsx`, `page.tsx`) using React Server Components.
-- `components/` – Reusable UI components (cards, tables, provenance badges, PixiJS canvas wrappers).
-- `hooks/` – Client-side data fetching hooks (SWR/React Query) and WebSocket helpers.
-- `lib/` – API client utilities, Yahoo OAuth helpers, formatting functions.
-- `styles/` – Global styles, design tokens, Tailwind or CSS modules.
-- `tests/` – Jest + Testing Library unit tests (Playwright/Cypress to follow later phases).
+- `app/`
+  - `layout.tsx` loads runtime configuration from the backend and wires global
+    providers.
+  - Route segments for `/dashboard`, `/optimizer`, `/waivers`, `/trade`, and
+    `/live` render feature-specific views backed by shared context.
+- `components/`
+  - `layout/` contains the application shell with navigation, environment badge,
+    and league/week selectors.
+  - Feature directories (`dashboard/`, `optimizer/`, `live/`, etc.) host the
+    React views, styled with CSS modules and provenance-aware badges.
+- `hooks/`
+  - SWR-based hooks for `/me/leagues`, `/leagues/{league}/roster`, `/games`
+    endpoints, and WebSocket deltas.
+- `lib/`
+  - Runtime configuration + environment helpers, API client utilities, and
+    roster math shared across components.
+- `tests/`
+  - Jest + Testing Library setup with coverage collection for components, hooks,
+    and utilities.
 
-## Next Steps
+## Running Locally
 
-1. Initialize the Next.js project with `next`, `react`, and `react-dom` dependencies.
-2. Configure ESLint, Prettier, Tailwind (if selected), and CI workflows.
-3. Implement OAuth callback page and API client wrappers using the backend `/auth/yahoo` endpoints.
-4. Build foundational UI shells for Dashboard, Optimizer, Waivers, Trade, and Live Game Center views.
-5. Add storybook or visual regression suite for critical components.
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Ensure the backend is running (or fixtures are available) so `/api/meta/config`
+and core endpoints respond. Environment variables are read from
+`.env.local` (see `frontend/.env.production.example`).
+
+## Test & Lint
+
+- `npm run lint` – Next.js lint rules.
+- `npm run test` – Jest + React Testing Library.
+
+## Feature Surfaces
+
+- **Dashboard** – Live roster overview, optimizer rationale, and provenance
+  badges.
+- **Optimizer** – Suggested swaps with lock toggles and recommended lineup
+  summary.
+- **Live Game Center** – Scoreboard, drive timeline, and WebSocket-driven play
+  feed with live/replay modes.
+- **Waivers & Trade** – Roadmap cards outlining upcoming capabilities, keeping
+  the UI aligned with the published plan.
+
+Contributions should preserve provenance indicators, accessibility, and the
+performance targets called out in the architecture docs.
